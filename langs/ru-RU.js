@@ -1,0 +1,358 @@
+var localeStrings = [];
+localeStrings.push("Приветствую вас!");
+localeStrings.push("Ваша задача проста - вам нужно управлять городом");
+localeStrings.push("Горожане будут платить налоги и размножаться каждый сезон (30 секунд)");
+localeStrings.push("постройте или улучшите вашу Сокровищницу");
+localeStrings.push("казна пополняется, милорд!");
+localeStrings.push("казна пустеет, милорд");//5
+localeStrings.push("количество злата не изменилось");
+localeStrings.push("население растет!");
+localeStrings.push("население убывает");
+localeStrings.push("количество подданных не изменилось");
+localeStrings.push("ваш город достиг максимальной численности; постройте или улучшите дома");//10
+localeStrings.push("игра сохранена успешно");
+localeStrings.push("игра загружена успешно");
+localeStrings.push("Загрузить игру? Вы потеряете весь несохраненный прогресс!");
+localeStrings.push("Извините, но сохраненных игр нет!");
+localeStrings.push("Сохранить игру? Это перезапишет текущее сохранение, если у вас такое есть");//15
+localeStrings.push("Пожалуйста, вставьте сохранение");
+localeStrings.push("очень длинная строка");
+localeStrings.push("Вы хотите нанять охранника? Это будет стоить %arg1 золотых сразу и %arg2 золотых за каждый сезон");
+localeStrings.push("Вы наняли охранника");
+localeStrings.push("Недостаточно золота!");//20
+localeStrings.push("Для найма охранника необходима Сокровищница!");
+localeStrings.push("Уволить охранника?");
+localeStrings.push("Вы уволили охранника");
+localeStrings.push("У вас нет охранников");
+localeStrings.push("предательство");//25
+localeStrings.push("шпионаж");
+localeStrings.push("коррупцию");
+localeStrings.push("подкуп");
+localeStrings.push("казнокрадство");
+localeStrings.push("кражи");//30
+localeStrings.push("Да, и как можно кроважаднее!");
+localeStrings.push("Да");
+localeStrings.push("Нет");
+localeStrings.push("вы казнили горожанина за %arg1");//34
+localeStrings.push("%arg1 золотых конфисковано");//35
+localeStrings.push("слишком мало жителей");
+localeStrings.push("охранники уволились, потому что вам нечем платить им!");
+localeStrings.push("пожар в городе!");
+localeStrings.push("Вызвать пожарных? Это будет стоить %arg1 золота");
+localeStrings.push("пожарные погасили огонь");//40
+localeStrings.push("будет гореть дотла!");
+localeStrings.push("фигня случается: воры украли %arg1 золота из вашей Сокровищницы");
+localeStrings.push("вы выиграли в лотерею %arg1 золота");
+localeStrings.push("Сохранить игру");
+localeStrings.push("Загрузить игру");//45
+localeStrings.push("Город");
+localeStrings.push("Мир");
+localeStrings.push("Настройки");
+localeStrings.push("Гарнизон");
+localeStrings.push("Строительство");//50
+localeStrings.push("Как играть");
+localeStrings.push("Discord");
+localeStrings.push("Потушить огонь");
+localeStrings.push("Казнить человека");
+localeStrings.push("фигня случается: чума унесла жизни %arg1 жителей");//55
+localeStrings.push("Вы хотите устроить фестиваль?\nЭто будет стоить %arg1 золота\n");
+localeStrings.push("Фестиваль был проведен не так давно.\nЭффект от фестиваля будет ослаблен.\n");
+localeStrings.push(["Взят ивентовый предмет!","Ваш вклад записан!"]);
+localeStrings.push(["Ваша прибыль от фестиваля %arg1","Ваш убыток от фестиваля %arg1"]);
+localeStrings.push("Хорошо");//60
+localeStrings.push("У вас уже есть герой");
+localeStrings.push("Автосохранение включено");
+localeStrings.push("Автосохранение выключено");
+localeStrings.push("Вы собираетесь построить %arg1.\nЕсли вы построите это здание, вы не сможете построить %arg2.\nВы уверены в вашем выборе?");
+localeStrings.push("Пока нечего показать. Попробуйте позже.");//65
+localeStrings.push("Настройки");
+localeStrings.push("Экспорт сохранения");
+localeStrings.push("Импорт сохранения");
+localeStrings.push("Автосохранение");
+localeStrings.push("Сменить цветовой режим");//70
+localeStrings.push("Опция");
+localeStrings.push("Включено");
+localeStrings.push("Выключено");
+localeStrings.push("Все звуковые эффекты");
+localeStrings.push("Эффекты всех событий");//75
+localeStrings.push("Эффекты событий, где нужна ваша реакция");
+localeStrings.push("Вся музыка");
+localeStrings.push("Музыка сценариев");
+localeStrings.push("Назад");
+localeStrings.push("Настройки музыки и эффектов");//80
+localeStrings.push("Открыть звуковые настройки");
+localeStrings.push("Мобильный вид");
+localeStrings.push("Размер лога событий");
+localeStrings.push("строк");
+localeStrings.push("Your UID");//85
+localeStrings.push("Your nickname");
+localeStrings.push("Update");
+localeStrings.push(["Никнейм зарегистрирован","Никнейм обновлен","Извините, но никнейм занят"]);
+localeStrings.push("Сокровищница была пополнена на %arg1 золота");
+localeStrings.push("Самоцветы - самая ценная валюта в игре");//90
+localeStrings.push("Гарнизон");
+localeStrings.push("Уволить");
+localeStrings.push("Нанять");
+localeStrings.push("Найм и управление войсками");
+localeStrings.push("Кастелян");//95
+localeStrings.push("Герой");
+localeStrings.push("Обучить брата-сержанта<br/>%arg1 золота");
+localeStrings.push("Нанять туркопола<br/>%arg1 золота");
+localeStrings.push("Обучить брата-рыцаря<br/>%arg1 золота");
+localeStrings.push("братья-сержанты: ");//100
+localeStrings.push("туркополы: ");
+localeStrings.push("братья-рыцари: ");
+localeStrings.push("передать бойца герою");
+localeStrings.push("передать бойца в гарнизон");
+localeStrings.push("placeholder");//105
+localeStrings.push("Строительство");
+localeStrings.push("Построить Дом<br/>ур. %arg1<br/>%arg2 золота");
+localeStrings.push("Построить Стену<br/>ур. %arg1<br/>%arg2 золота");
+localeStrings.push("Построить Башню<br/>ур. %arg1<br/>%arg2 золота");
+localeStrings.push("Построить Сокровищницу<br/>ур. %arg1<br/>%arg2 золота");//110
+localeStrings.push("Построить Виселицу<br/>ур. %arg1<br/>%arg2 золота");
+localeStrings.push("Построить Фонтан<br/>ур. %arg1<br/>%arg2 золота");
+localeStrings.push("Построить Тайник<br/>ур. %arg1<br/>%arg2 золота");
+localeStrings.push("Построить Таверну<br/>ур. %arg1<br/>%arg2 золота");
+localeStrings.push("Построить Конюшню<br/>ур. %arg1<br/>%arg2 золота");//115
+localeStrings.push("Построить Стрельбище<br/>ур. %arg1<br/>%arg2 золота");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");//120
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");//125
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");//130
+localeStrings.push("<h1>1255 Бургомастер</h1>" +
+    "<h2>Как играть</h2>" +
+    "У этой игры под 'капотом' находится таймер. Каждый 'тик' таймера происходит за 30 секунд.<br>" +
+    "После каждого тика, население растет и платит налоги.<br>" +
+    "Обычно, каждый горожанин приносит один золотой за тик.<br>" +
+    "Однако, принимаемые игроком решения влияют на это значение.<br>" +
+    "Вам нужно строить дома для поддержания роста населения.<br>" +
+    "Чем выше уровень домов, тем больше населения сможет жить в вашем городе.<br>" +
+    "Вам нужно строить стены и крепость, чтобы предотвратить разрушительные набеги.<br>" +
+    "Вам нужно построить сокровищницу для хранения золота.<br>" +
+    "Чем выше уровень сокровищницы, тем больше злата вы сможете хранить.<br>" +
+    "Также, сокровищница позволяет нанимать охранников.<br>" +
+    "Охрана существенно снижает шанс воровства из сокровищницы.<br>" +
+    "Найм охранника будет стоить %arg1 золотых.<br>" +
+    "Каждый тик охранники нуждаются в жаловании, которое составляет %arg2 золотых.<br>" +
+    "Если в Сокровищнице будет недостаточно денег на их оплату, они покинут вас.<br>" +
+    "Вы можете построить фонтан ИЛИ виселицу. Вы не можете изменить свой выбор, после того, как построили здание.<br>" +
+    "Фонтаны увеличивают счастье и скорость роста населения.<br>" +
+    "Виселица уменьшает счастье, скорость роста населения, увеличивает налоги и позволяет казнить горожан.<br>" +
+    "Казнь любого горожанина сопровождается конфискацией его имущества<br>" +
+    "Тайник позволяет сократить потери от воровства. Тайник нельзя построить без сокровищницы.<br>"+
+    "Это однопользовательская игра<br>"+
+    "<br>" +
+    "Поддерживаемые языки(ПЯ): Английский, Русский.<br>"+
+    "Сообществом Поддерживаемые Языки (СПЯ): Немецкий, Эсперанто, Французский<br>"+
+    "СПЯ значит, что автор не помогает и не отвечает на вопросы, заданные на СПЯ,<br>"+
+    "несмотря на то, что части игры или игра целиком могут быть доступны на СПЯ.<br>"+
+    "Также надо отметить, что переводы СПЯ могут содержать ошибки и непереведенные части<br>"+
+    "или части, где перевод устарел.<br>"+
+    "Вы можете помочь с переводами здесь:<br>"+
+    "<a href='https://docs.google.com/spreadsheets/d/1WxRoxfPpYBHqvWb4mQNxGVr3r4VyxHSEuELzdU1I2PE'>https://docs.google.com/spreadsheets/d/1WxRoxfPpYBHqvWb4mQNxGVr3r4VyxHSEuELzdU1I2PE</a><br>");//131
+localeStrings.push("колодец желаний");
+localeStrings.push("пилорама");
+localeStrings.push("стена");
+localeStrings.push("каменная стена");//135
+localeStrings.push("башня");
+localeStrings.push("каменная башня");
+localeStrings.push("дом");
+localeStrings.push("дома");
+localeStrings.push("таверна");//140
+localeStrings.push("виселица");//TODO ["виселица","виселицу"]
+localeStrings.push("фонтан");
+localeStrings.push("сокровищница");
+localeStrings.push("золото");
+localeStrings.push("население");//145
+localeStrings.push("стрельбище");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");//150
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");//155
+localeStrings.push("placeholder");
+localeStrings.push("В начало");
+localeStrings.push("Предыдущая");
+localeStrings.push("Следующая");
+localeStrings.push("К текущей");//160
+localeStrings.push("Данные о населении по периодам");
+localeStrings.push("Текущий лимит населения %arg1");
+localeStrings.push("Текущий лимит золота %arg1");
+localeStrings.push("Данные о казне по периодам");
+localeStrings.push(["Д","Ч","М"]);//165
+localeStrings.push("Время до начала ближайшего тематического игрового мероприятия");
+localeStrings.push("Время до конца ближайшего тематического игрового мероприятия");
+localeStrings.push("Небо над городом потемнело, засверкали молнии, и внезапно всё прекратилось.");
+localeStrings.push("День ");
+localeStrings.push("Ваш герой должен быть в автокампании");//170
+localeStrings.push("Вы хотите отозвать героя?");
+localeStrings.push("герой и все его войска встретили свою смерть на поле брани.");
+localeStrings.push("герой встретил превосходящего по численности врага и одолел его. Опыт и деньги стали наградой!");
+localeStrings.push("герой встретил малочисленного врага и одолел его. Опыт и деньги стали наградой!");
+localeStrings.push("день прошел скучно. Один язычник был убит (охотник принял его в лесу за дикого зверя. Бывает)");//175
+localeStrings.push("Добытые трофеи из похода: ");
+localeStrings.push("Вы хотите уволить героя со всеми войсками?");
+localeStrings.push("Нет. Сперва надо забрать войска");
+localeStrings.push("Вы хотите создать карту заново? Это будет стоить %arg1 золота");
+localeStrings.push("Нельзя это сделать, пока герой на карте");//180
+localeStrings.push("Вы в Таверне");
+localeStrings.push("Нанять героя<br/>уровень %arg1<br/>%arg2 золота");
+localeStrings.push("удача");
+localeStrings.push("суеверность");
+localeStrings.push("мораль");//185
+localeStrings.push("герой нашел немного денег: ");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("Уровень");
+localeStrings.push("Атака");//190
+localeStrings.push("Защита");
+localeStrings.push("Сила магии");
+localeStrings.push("Мана");
+localeStrings.push("Опыт");
+localeStrings.push("Текущий опыт");//195
+localeStrings.push("Опыт, необходимый для следующего уровня");
+localeStrings.push("Характер");
+localeStrings.push("Добропорядочный");
+localeStrings.push("Нейтральный");
+localeStrings.push("Разрушительный");//200
+localeStrings.push("Добряк");
+localeStrings.push("Пофигист");
+localeStrings.push("Злыдень");
+localeStrings.push(["Рыцарь", "Монах"]);
+localeStrings.push("Класс");//205
+localeStrings.push("Герой сейчас ");
+localeStrings.push(" где-то в городе");
+localeStrings.push(" в автокампании");
+localeStrings.push(" в кампании");
+localeStrings.push(["ест", "пьет","играет в карты","тренируется","дерется","отдыхает"]);//210
+localeStrings.push(["возвращается в город, будучи","на марше","убивает язычников", "обращает язычников","строит лагерь","собирает трофеи"]);
+localeStrings.push(["на марше", "строит лагерь","собирает трофеи"]);
+localeStrings.push("Дней от города");
+localeStrings.push("От города");
+localeStrings.push("К городу");//215
+localeStrings.push("Злата в кошеле героя");
+localeStrings.push("Уволить героя");
+localeStrings.push("Отправить в поход");
+localeStrings.push("Вернуть из похода");
+localeStrings.push("Открыть журнал");//220
+localeStrings.push("Свиток городских врат");
+localeStrings.push("На карту приключений");
+localeStrings.push("Пересоздать карту");
+localeStrings.push("Ваш герой достиг следующего уровня!");
+localeStrings.push("Выберите поведение героя: агрессивное (выше награда и риск) или осторожное?");//225
+localeStrings.push("Агрессивное. Хочу крови и денег!");
+localeStrings.push("Осторожное. Какой толк от денег, если ваш герой мертв?");
+localeStrings.push("Сначала добавьте войск герою");
+localeStrings.push("Для этого нужен герой!");
+localeStrings.push("Приятно иметь с вами дело. Надеюсь на скорую встречу с вами вновь.");//230
+localeStrings.push("Поздравляю с покупкой. Это хороший выбор.");
+localeStrings.push("Это здание нужно для защиты города от захватчиков.");
+localeStrings.push("Это здание и его улучшения нужны, чтобы поднять лимит населения.");
+localeStrings.push("Это здание и его улучшения нужны, чтобы поднять лимит золота.<br>Это здание позволит вам нанять охранников.<br>Они нужны, чтобы уменьшить шансы быть обкраденным.");
+localeStrings.push("Это здание и его улучшения нужны, чтобы можно было казнить горожан.<br>Также повышает налоговые поступления, и уменьшает рождаемость и счастье горожан.<br>Если вы построите это здание, вы не сможете построить фонтан!");
+localeStrings.push("Это здание и его улучшения нужны, чтобы проводить фестивали.<br>Также повышает рождаемость и счастье горожан, и уменьшает налоговые поступления.<br>Если вы построите это здание, вы не сможете построить виселицу!");
+localeStrings.push("Это здание и его улучшения нужны, чтобы сохранить ваши деньги от воров, в случае если они ограбят сокровищницу.<br>Более высокий уровень тайника позволяет спрятать больше денег.");
+localeStrings.push("Это здание и его улучшения нужны, чтобы нанимать героев.<br>Более высокий уровень таверны позволит нанимать вам более опытных героев.");
+localeStrings.push("Это здание и его улучшения нужны, чтобы нанимать конницу.<br>Более высокий уровень конюшни позволит нанимать вам более опытные войска.");
+localeStrings.push("Это здание и его улучшения нужны, чтобы нанимать лучников.<br>Более высокий уровень стрельбища позволит нанимать вам более опытные войска.");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");//245
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");//250
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("Direction: ");
+localeStrings.push("Герой теперь буквально в одном шаге от города!");//255
+localeStrings.push("У вас нет свитка городских врат!");
+localeStrings.push("Сначала направьте героя в город.");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("Продавец с черного рынка предлагает свои товары на продажу!");//260
+localeStrings.push("цена ");
+localeStrings.push("Купить выбранное");
+localeStrings.push("Продавец с черного рынка может выкупить ваши товары.");
+localeStrings.push("Продать выбранное");
+localeStrings.push("placeholder");//265
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("Пожарная охрана");//270
+localeStrings.push("Пожарная охрана");
+localeStrings.push("на службе");
+localeStrings.push("не на службе");
+localeStrings.push("Цена содержания пожарной охраны");
+localeStrings.push("%arg1% of fire extinguished");//275
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("Основной источник выплаты содержания войскам героя ");
+localeStrings.push("Вы не можете платить содержание сержантам. Они уволены.");//280
+localeStrings.push("Вы не можете платить содержание туркополам. Они уволены.");
+localeStrings.push("Вы не можете платить содержание рыцарям. Они уволены.");
+localeStrings.push("Вы не можете платить содержание пожарным. Они уволены.");
+localeStrings.push("кошелек героя");
+localeStrings.push("сокровищница");//285
+localeStrings.push("Свиток телепорта");
+localeStrings.push("Этот одноразовый предмет позволяет вам совершить телепорт к городу в автокампании.");
+localeStrings.push("Четырехлистный клевер");
+localeStrings.push("Этот предмет увеличивает удачу и суеверность героя на 1");
+localeStrings.push("Медаль отваги");//290
+localeStrings.push("Этот предмет увеличивает мораль героя на 1");
+localeStrings.push("Медаль храбрости");
+localeStrings.push("Этот предмет увеличивает мораль героя на 1");
+localeStrings.push("Медаль чести");
+localeStrings.push("Этот предмет увеличивает мораль героя на 1");//295
+localeStrings.push("Медаль за отличия");
+localeStrings.push("Этот предмет увеличивает мораль героя на 1");
+localeStrings.push("Заячья лапка");
+localeStrings.push("Этот предмет увеличивает удачу и суеверность героя на 1");
+localeStrings.push("Золотая подкова");//300
+localeStrings.push("Этот предмет увеличивает удачу и суеверность героя на 1");
+localeStrings.push("Удачливая монетка игрока");
+localeStrings.push("Этот предмет увеличивает удачу и суеверность героя на 1");
+localeStrings.push("Песочные часы неудачи");
+localeStrings.push("Этот предмет отменяет все бонусы удачи и суеверности героя и его врага");//305
+localeStrings.push("Хрустальный шар");
+localeStrings.push("Этот предмет позволяет предсказать результат следующей битвы");//almost all times. 70% I guess, would be enough for start
+localeStrings.push("This item alows your hero to guess next battle result");//almost all times. 70% I guess, would be enough for start
+localeStrings.push("Brother-sergeant. Mounted melee unit. Hiring cost %arg1. Upkeep cost %arg2");
+localeStrings.push("Turkopol. Mounted ranged unit. Hiring cost %arg1. Upkeep cost %arg2");
+localeStrings.push("Brother-knight. Advanced mounted melee unit. Hiring cost %arg1. Upkeep cost %arg2");//310
+localeStrings.push("Castellan");
+localeStrings.push("Hero");
+localeStrings.push("Move the unit to the hero's squad");
+localeStrings.push("Move the unit to the garrison");
+localeStrings.push("You don't have any units to transfer in this direction");//315
+localeStrings.push("To do that, you need to build the stable");
+localeStrings.push("To do that, you need to build the archery range");
+localeStrings.push("To do that, you need to upgrade the stable to %arg1 level");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");//320
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");//325
