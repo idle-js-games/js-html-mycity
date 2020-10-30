@@ -41,7 +41,7 @@ localeStrings.push("пожар в городе!");
 localeStrings.push("Вызвать пожарных? Это будет стоить %arg1 золота");
 localeStrings.push("пожарные погасили огонь");//40
 localeStrings.push("будет гореть дотла!");
-localeStrings.push("фигня случается: воры украли %arg1 золота из вашей Сокровищницы");
+localeStrings.push("фигня случается: воры украли %arg1 золота из вашей казны");
 localeStrings.push("вы выиграли в лотерею %arg1 золота");
 localeStrings.push("Сохранить игру");
 localeStrings.push("Загрузить игру");//45
@@ -337,18 +337,17 @@ localeStrings.push("Песочные часы неудачи");
 localeStrings.push("Этот предмет отменяет все бонусы удачи и суеверности героя и его врага");//305
 localeStrings.push("Хрустальный шар");
 localeStrings.push("Этот предмет позволяет предсказать результат следующей битвы");//almost all times. 70% I guess, would be enough for start
-localeStrings.push("This item alows your hero to guess next battle result");//almost all times. 70% I guess, would be enough for start
-localeStrings.push("Brother-sergeant. Mounted melee unit. Hiring cost %arg1. Upkeep cost %arg2");
-localeStrings.push("Turkopol. Mounted ranged unit. Hiring cost %arg1. Upkeep cost %arg2");
-localeStrings.push("Brother-knight. Advanced mounted melee unit. Hiring cost %arg1. Upkeep cost %arg2");//310
-localeStrings.push("Castellan");
-localeStrings.push("Hero");
-localeStrings.push("Move the unit to the hero's squad");
-localeStrings.push("Move the unit to the garrison");
-localeStrings.push("You don't have any units to transfer in this direction");//315
-localeStrings.push("To do that, you need to build the stable");
-localeStrings.push("To do that, you need to build the archery range");
-localeStrings.push("To do that, you need to upgrade the stable to %arg1 level");
+localeStrings.push("Брат-сержант. Конный воин ближнего боя. Цена найма %arg1. Цена содержания %arg2");
+localeStrings.push("Туркопол. Верховой лучник. Цена найма %arg1. Цена содержания %arg2");
+localeStrings.push("Брат-рыцарь. Конный воин ближнего боя с хорошими доспехами. Цена найма %arg1. Цена содержания %arg2");//310
+localeStrings.push("Кастелян");
+localeStrings.push("Герой");
+localeStrings.push("Переместить бойца в отряд героя");
+localeStrings.push("Переместить бойца в гарнизон");
+localeStrings.push("У вас нет бойцов, которых можно переместить");//315
+localeStrings.push("Для этого вам нужна конюшня");
+localeStrings.push("Для этого вам нужно стрельбище");
+localeStrings.push("Для этого нужно улучшить конюшни до %arg1 уровня");
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");//320
 localeStrings.push("placeholder");
@@ -356,3 +355,55 @@ localeStrings.push("placeholder");
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");//325
+localeStrings.push("Строчка сохранения не найдена в текстовом поле");
+localeStrings.push("Не получается загрузить игру из этого сохранения");
+localeStrings.push("Скачать игру (чтобы играть без Интернета)");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");//330
+localeStrings.push("Переместить бойцов в отряд героя");
+localeStrings.push("Переместить все войска в отряд героя");
+localeStrings.push("Переместить бойцов в гарнизон");
+localeStrings.push("Переместить все войска в гарнизон");
+localeStrings.push("Вы не можете платить содержание %arg1 охраннику(ам) сокровищницы. Они уволены.");
+localeStrings.push("Вы не можете платить содержание %arg1 сержанту(ам). Они уволены.");
+localeStrings.push("Вы не можете платить содержание %arg1 туркополу(ам). Они уволены.");
+localeStrings.push("Вы не можете платить содержание %arg1 рыцарю(ям). Они уволены.");
+localeStrings.push("Уволить сержанта из гарнизона");
+localeStrings.push("Уволить всех сержантов из гарнизона"); //340
+localeStrings.push("Уволить туркопола из гарнизона");
+localeStrings.push("Уволить всех туркополов из гарнизона");
+localeStrings.push("Уволить рыцаря из гарнизона");
+localeStrings.push("Уволить всех рыцарей из гарнизона");
+localeStrings.push("Распустить все силы из гарнизона"); //345
+localeStrings.push("Уволить сержанта из отряда героя");
+localeStrings.push("Уволить всех сержантов из отряда героя");
+localeStrings.push("Уволить туркопола из отряда героя");
+localeStrings.push("Уволить всех туркополов из отряда героя");
+localeStrings.push("Уволить рыцаря из отряда героя");  //350
+localeStrings.push("Уволить всех рыцарей из отряда героя");
+localeStrings.push("Распустить все силы из отряда героя");
+localeStrings.push("Вы собираетесь уволить сержанта из гарнизона. Вы уверены?");
+localeStrings.push("Вы собираетесь уволить туркопола из гарнизона. Вы уверены?");
+localeStrings.push("Вы собираетесь уволить рыцаря из гарнизона. Вы уверены?"); // 355
+localeStrings.push("Вы собираетесь уволить всех сержантов из гарнизона. Вы уверены?");
+localeStrings.push("Вы собираетесь уволить всех туркополов из гарнизона. Вы уверены?");
+localeStrings.push("Вы собираетесь уволить всех рыцарей из гарнизона. Вы уверены?");
+localeStrings.push("Вы собираетесь уволить сержанта из отряда героя. Вы уверены?");
+localeStrings.push("Вы собираетесь уволить туркопола из отряда героя. Вы уверены?"); //360
+localeStrings.push("Вы собираетесь уволить рыцаря из отряда героя. Вы уверены?");
+localeStrings.push("Вы собираетесь уволить всех сержантов из отряда героя. Вы уверены?");
+localeStrings.push("Вы собираетесь уволить всех туркополов из отряда героя. Вы уверены?");
+localeStrings.push("Вы собираетесь уволить всех рыцарей из отряда героя. Вы уверены?");
+localeStrings.push("Вы собираетесь распустить все силы гарнизона: %arg1 %arg2 %arg3. Вы уверены?"); //365
+localeStrings.push("Вы собираетесь распустить все силы отряда героя: %arg1 %arg2 %arg3. Вы уверены?");
+localeStrings.push("У вас нет сержантов в гарнизоне");
+localeStrings.push("У вас нет туркополов в гарнизоне");
+localeStrings.push("У вас нет рыцарей в гарнизоне");
+localeStrings.push("У вас нет сержантов в отряде героя"); //370
+localeStrings.push("У вас нет туркополов в отряде героя");
+localeStrings.push("У вас нет рыцарей в отряде героя");
+localeStrings.push("У вас нет войск в гарнизоне"); 
+localeStrings.push("У вас нет войск в отряде героя");
+localeStrings.push("сержанты(%arg1)"); // 375
+localeStrings.push("туркополы(%arg1)");
+localeStrings.push("рыцари(%arg1)");
