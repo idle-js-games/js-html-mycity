@@ -128,9 +128,9 @@
 			border: thin solid black;
 			overflow:scroll;
 			/*
-            overflow-x: hidden;
-            overflow-y: scroll;
-            */
+			overflow-x: hidden;
+			overflow-y: scroll;
+			*/
 		}
 		#lblEventLBDetails {
 			width: 795px;
@@ -138,9 +138,9 @@
 			border: thin solid black;
 			overflow:scroll;
 			/*
-            overflow-x: hidden;
-            overflow-y: scroll;
-            */
+			overflow-x: hidden;
+			overflow-y: scroll;
+			*/
 		}
 		#htmlGame {
 			margin: auto;
@@ -151,10 +151,31 @@
 			border: thin solid black;
 			overflow:scroll;
 			/*
-            overflow-x: hidden;
-            overflow-y: scroll;
-            */
+			overflow-x: hidden;
+			overflow-y: scroll;
+			*/
 		}
+
+		/*-- Some new styles --*/
+
+		.btn-hire {
+			width: 200px;
+			height: 45px;
+		}
+
+		.btnArrow {
+			padding-left: 1px;
+			padding-right: 1px;
+		}
+		.lblHiringTroops {
+			font-size: 12px;
+		}
+
+		.btnDismiss {
+			padding: 0 1px;
+			height: 22px;
+		}
+
 	</style>
 	<script id="chatBroEmbedCode">
 		/* Chatbro Widget Embed Code Start */
@@ -228,28 +249,31 @@
 			<h3><div id="labelSettings">Settings</div></h3>
 			<!-- TODO make checkboxes with chat system messages -->
 			<!--<p>Alert / MSG to chat</p>-->
-			<table>
-			<tr>
-				<!-- TODO make a message about turning on / off autosaves for color disabled people -->
-				<td><div id="labelAutosave">Autosave</div><img id="autosaveImg" onclick="changeAutosave()" src="resources/button_red.png"></td>
-				<td><button id="buttonExportGame" onclick="exportGame()" >Export Game</button></td>
-				<td><button id="buttonImportGame" onclick="importGame()" >Import Game</button></td>
-			</tr>
-			</table>
-			<input id="savestring" name="savestring" value="" style="width:600px">
-			<div style="position: absolute; top: 90px; left:500px">
 			<select id="selectLng" size="1" onchange="reloadLang()">
 				<option id="optionLngEn" selected value="en-US">English</option>
 				<option id="optionLngRu"          value="ru-RU">Русский</option>
 				<option id="optionLngGe"          value="de-DE">Deutsch</option>
 				<option id="optionLngEo"          value="eo">Esperanto</option>
 				<option id="optionLngFr"          value="fr-FR">Français</option>
-				<option id="optionLngFi"          value="fi-FI">Suomi</option>
 			</select>
-			</div>
+			<table>
+			<tr>
+				<!-- TODO make a message about turning on / off autosaves for color disabled people -->
+				<td width="40%"><label id="labelAutosave">Autosave</label><img id="autosaveImg" onclick="changeAutosave()" src="resources/button_red.png" style="margin-left: 20px;"></td>
+				<td><button id="buttonExportGame" onclick="exportGame()" >Export Game</button></td>
+				<td><button id="buttonImportGame" onclick="importGame()" >Import Game</button></td>
+			</tr>
+			</table>
+            <br>
+			<input id="savestring" name="savestring" value="" style="width:600px">
+            <br>
+            <a id="downloadGame" href="https://github.com/Areso/1255-burgomaster/archive/gh-pages.zip">Download game for playing off-grid (to play without Internet connection)</a>
 			<br>
+            <br>
 			<button id="btnColorMode" onclick="changeColorMode()">ChangeColorMode</button>
-			<button id="btnSoundSettings" onclick="openTab(null, 'tabSettingsSound')">Open sound settings</button><br>
+			<button id="btnSoundSettings" onclick="openTab(null, 'tabSettingsSound')">Open sound settings</button>
+            <br>
+            <br>
 			<input type="checkbox" id="cbMobileUI" value="mobileUI" onclick="game.mobileUI()" style="margin-left: 50px;"><label id="lblStnMobileUI">Mobile UI</label>
 			<label id="lblStnEventLogSize" style="margin-left: 20px;">Event log size</label>
 			<input id="inpStnEventLogSize" value="" onchange="game.setupEventLogSize()" style="width:35px; margin-right:10px;">
@@ -614,33 +638,55 @@
 					<td>
 						<img id="imgHiringScreenKnight" src="resources/knight.png" onmouseover="game.help(this)">
 					</td>
+					<td></td>
 				</tr>
 				<tr>
 					<td>
 
 					</td>
 					<td>
-						<button id="btnHireSergeant" onclick="game.hireTroopsSergeant()" onmouseover="game.help(this)" style="width:225px; height:45px;">Hire sergeant</button>
+						<button id="btnHireSergeant" onclick="game.hireTroopsSergeant()" onmouseover="game.help(this)" class="btn-hire">Hire sergeant</button>
 					</td>
 					<td>
-						<button id="btnHireTurkopol" onclick="game.hireTroopsTurkopol()" onmouseover="game.help(this)" style="width:225px; height:45px;">Hire turkopol</button>
+						<button id="btnHireTurkopol" onclick="game.hireTroopsTurkopol()" onmouseover="game.help(this)" class="btn-hire">Hire turkopol</button>
 					</td>
 					<td>
-						<button id="btnHireKnight" onclick="game.hireTroopsKnight()" onmouseover="game.help(this)" style="width:225px; height:45px;">Hire knight</button>
+						<button id="btnHireKnight" onclick="game.hireTroopsKnight()" onmouseover="game.help(this)" class="btn-hire">Hire knight</button>
 					</td>
+					<td></td>
 				</tr>
 				<tr>
 					<td>
 						<img id="imgCastellanInHiringScreen" src="resources/castellan.png" onmouseover="game.help(this)">
 					</td>
 					<td>
-						<label id="lblTabHiringTroopsSergeantsGarrison">sergeants: </label><div id="lblGarnisonSergeants" style="display: inline">0</div><button id="btnMoveSergeantToHero" onclick="game.moveSergeantsToHero()" onmouseover="game.help(this)">↓</button>
+						<label class="lblHiringTroops" id="lblTabHiringTroopsSergeantsGarrison">sergeants: </label><div id="lblGarnisonSergeants" style="display: inline">0</div>
+						<button class="btnArrow" id="btnMoveSergeantToHero" onclick="game.moveSergeantsToHero()" onmouseover="game.help(this)">↓</button>
+						<button class="btnArrow" id="btnMoveAllSergeantsToHero" onclick="game.moveAllSergeantsToHero()" onmouseover="game.help(this)">⇓</button>
+						<br>
+						<button id="btnDismissGarrisonSergeant" class="btnDismiss" onclick="game.dismissGarrisonSergeant()" onmouseover="game.help(this)">X</button>
+						<button id="btnDismissAllGarrisonSergeants" class="btnDismiss" onclick="game.dismissAllGarrisonSergenats()" onmouseover="game.help(this)">XX</button>
 					</td>
 					<td>
-						<label id="lblTabHiringTroopsTurkopolsGarrison">turkopols: </label><div id="lblGarnisonTurkopols" style="display: inline">0</div><button id="btnMoveTurkopolToHero" onclick="game.moveTurkopolsToHero()" onmouseover="game.help(this)">↓</button>
+						<label class="lblHiringTroops" id="lblTabHiringTroopsTurkopolsGarrison">turkopols: </label><div id="lblGarnisonTurkopols" style="display: inline">0</div>
+						<button class="btnArrow" id="btnMoveTurkopolToHero" onclick="game.moveTurkopolsToHero()" onmouseover="game.help(this)">↓</button>
+						<button class="btnArrow" id="btnMoveAllTurkopolsToHero" onclick="game.moveAllTurkopolsToHero()" onmouseover="game.help(this)">⇓</button>
+						<br>
+						<button id="btnDismissGarrisonTurkopol" class="btnDismiss" onclick="game.dismissGarrisonTurkopol()" onmouseover="game.help(this)">X</button>
+						<button id="btnDismissAllGarrisonTurkopols" class="btnDismiss" onclick="game.dismissAllGarrisonTurkopols()" onmouseover="game.help(this)">XX</button>
 					</td>
 					<td>
-						<label id="lblTabHiringTroopsKnightsGarrison">knights: </label><div id="lblGarnisonKnights" style="display: inline">0</div><button id="btnMoveKnightToHero" onclick="game.moveKnightsToHero()" onmouseover="game.help(this)">↓</button>
+						<label class="lblHiringTroops" id="lblTabHiringTroopsKnightsGarrison">knights: </label><div id="lblGarnisonKnights" style="display: inline">0</div>
+						<button class="btnArrow" id="btnMoveKnightToHero" onclick="game.moveKnightsToHero()" onmouseover="game.help(this)">↓</button>
+						<button class="btnArrow" id="btnMoveAllKnightsToHero" onclick="game.moveAllKnightsToHero()" onmouseover="game.help(this)">⇓</button>
+						<br>
+						<button id="btnDismissGarrisonKnight" class="btnDismiss" onclick="game.dismissGarrisonKnight()" onmouseover="game.help(this)">X</button>
+						<button id="btnDismissAllGarrisonKnights" class="btnDismiss" onclick="game.dismissAllGarrisonKnights()" onmouseover="game.help(this)">XX</button>
+					</td>
+					<td>
+						<button class="btnArrow"  id="btnMoveAllTroopsToHero" onclick="game.moveAllTroopsToHero()" onmouseover="game.help(this)">⤋</button>
+						<br>
+						<button id="btnDismissAllGarrisonForces" class="btnDismiss" onclick="game.dismissAllGarrisonForces()" onmouseover="game.help(this)">XXX</button>
 					</td>
 				</tr>
 				<tr id="trHeroHiringTroops" style="visibility: collapse">
@@ -649,13 +695,33 @@
 						<img id="imgHeroInHiringScreenMonk" style="display: none" src="resources/hero-monk.png" onmouseover="game.help(this)">
 					</td>
 					<td>
-						<label id="lblTabHiringTroopsSergeantsHeroSquad">sergeants: </label><div id="lblHeroSergeants" style="display: inline">0</div><button id="btnMoveSergeantToGarrison" onclick="game.moveSergeantsToGarnison()" onmouseover="game.help(this)">↑</button>
+						<label class="lblHiringTroops" id="lblTabHiringTroopsSergeantsHeroSquad">sergeants: </label><div id="lblHeroSergeants" style="display: inline">0</div>
+						<button class="btnArrow" id="btnMoveSergeantToGarrison" onclick="game.moveSergeantsToGarnison()" onmouseover="game.help(this)">↑</button>
+						<button class="btnArrow" id="btnMoveAllSergeantsToGarrison" onclick="game.moveAllSergeantsToGarrison()" onmouseover="game.help(this)">⇑</button>
+						<br>
+						<button id="btnDismissHeroSergeant" class="btnDismiss" onclick="game.dismissHeroSergeant()" onmouseover="game.help(this)">X</button>
+						<button id="btnDismissAllHeroSergeants" class="btnDismiss" onclick="game.dismissAllHeroSergeants()" onmouseover="game.help(this)">XX</button>
 					</td>
 					<td>
-						<label id="lblTabHiringTroopsTurkopolsHeroSquad">turkopols: </label><div id="lblHeroTurkopols" style="display: inline">0</div><button id="btnMoveTurkopolToGarrison" onclick="game.moveTurkopolsToGarnison()" onmouseover="game.help(this)">↑</button>
+						<label class="lblHiringTroops" id="lblTabHiringTroopsTurkopolsHeroSquad">turkopols: </label><div id="lblHeroTurkopols" style="display: inline">0</div>
+						<button class="btnArrow" id="btnMoveTurkopolToGarrison" onclick="game.moveTurkopolsToGarnison()" onmouseover="game.help(this)">↑</button>
+						<button class="btnArrow" id="btnMoveAllTurkopolsToGarrison" onclick="game.moveAllTurkopolsToGarrison()" onmouseover="game.help(this)">⇑</button>
+						<br>
+						<button id="btnDismissHeroTurkopol" class="btnDismiss" onclick="game.dismissHeroTurkopol()" onmouseover="game.help(this)">X</button>
+						<button id="btnDismissAllHeroTurkopols" class="btnDismiss" onclick="game.dismissAllHeroTurkopols()" onmouseover="game.help(this)">XX</button>
 					</td>
 					<td>
-						<label id="lblTabHiringTroopsKnightsHeroSquad">knights: </label><div id="lblHeroKnights" style="display: inline">0</div><button id="btnMoveKnightToGarrison" onclick="game.moveKnightsToGarnison()" onmouseover="game.help(this)">↑</button>
+						<label class="lblHiringTroops" id="lblTabHiringTroopsKnightsHeroSquad">knights: </label><div id="lblHeroKnights" style="display: inline">0</div>
+						<button class="btnArrow" id="btnMoveKnightToGarrison" onclick="game.moveKnightsToGarnison()" onmouseover="game.help(this)">↑</button>
+						<button class="btnArrow" id="btnMoveAllKnightsToGarrison" onclick="game.moveAllKnightsToGarrison()" onmouseover="game.help(this)">⇑</button>
+						<br>
+						<button id="btnDismissHeroKnight" class="btnDismiss" onclick="game.dismissHeroKnight()" onmouseover="game.help(this)">X</button>
+						<button id="btnDismissAllHeroKnights" class="btnDismiss" onclick="game.dismissAllHeroKnights()" onmouseover="game.help(this)">XX</button>
+					</td>
+					<td>
+						<button class="btnArrow" id="btnMoveAllTroopsToGarrison" onclick="game.moveAllTroopsToGarrison()" onmouseover="game.help(this)">⤊</button>
+						<br>
+						<button id="btnDismissAllHeroForces" class="btnDismiss" onclick="game.dismissAllHeroForces()" onmouseover="game.help(this)">XXX</button>
 					</td>
 				</tr>
 			</table>
@@ -856,6 +922,9 @@
 	buildingsInTownY=[];
 	buildingsInTownW=[];
 	buildingsInTownH=[];
+    function inArray (arrayToCheck, valueToCheck) {
+		 return arrayToCheck.indexOf(valueToCheck) > -1;
+	}
 	function deleteFromArray (arrayToMod, indexToDelete) {
 		arrayLenght                = arrayToMod.length;
 		tArrayBeforeDeletedElement = arrayToMod.slice(0,indexToDelete);
@@ -1885,6 +1954,7 @@
 									rnd = 0;
 								}
 							}
+                            //TODO, TO DO CHECK THIS CODE. IT SMELLS.
 							if (i===config.sizeMapX-1 && j===config.sizeMapY-1 && blackmarket_flag===false){
 								rnd = 4;
 							}
@@ -1916,13 +1986,121 @@
 								}
 							}
 							game.myMapRemObjects[i][j] = rnd;
-							console.log(rnd)
+							//console.log(rnd)
 						}
 					}
 				}
+				//ISSUE #339
+				//game.checkObjAccessibility();//THIS CODE IS BROKEN!
 				game.mapCreated = 1;
 				composite_gm();
 			}
+		},
+		checkObjAccessibility: function () {
+			//GLADYSHEV
+			startPoint            = game.myMapObjects[game.castleX][game.castleY+1];
+			nonAccessible         = false;
+			//10 castle entrance, 4 
+			visitableElements     = [10];
+			pointsToCheck         = [];
+			ci                    = 0;
+			for (i=0; i<config.sizeMapX; i++){
+				for (j=0; j<config.sizeMapX; j++){
+					ci = ci + 1; //ci is common iterator for objects
+					//first we check whether myMapObjects has something
+					//then add AND condition
+					//that myMapObjects is NOT in the list of nonVisitableElements
+					if (inArray(visitableElements, game.myMapObjects[i][j])) {
+						console.log("the element code is "+game.myMapObjects[i][j]+" in this loc "+i+"; "+j);
+						pointsToCheck.push({"coord":[i,j]});
+					}
+				}
+			}
+			pfmap           = game.prepareMap();
+			numberOfPoints  = pointsToCheck.length;
+			console.log("---");
+			for (np=0; np<numberOfPoints; np++) {
+				console.log(pointsToCheck[np]);
+				resPathMap = game.genPathMap(pfmap)
+			}
+			console.log("---");
+		},
+		prepareMap : function () {
+			preparedMap = game.myMapObjects;
+			for (i=0; i<config.sizeMapX; i++){
+		for (j=0; j<config.sizeMapX; j++){
+					if (game.myMapObjects[i][j] == 10){
+						preparedMap[i][j] = 1;
+					}
+					if (game.myMapObjects[i][j] == 0){
+						preparedMap[i][j] = 1;
+					}
+					if (game.myMapObjects[i][j] !== 0 && game.myMapObjects[i][j] !== 10) {
+						preparedMap[i][j] = 0;
+					}
+				}
+			}
+			return preparedMap;
+		},
+		genPathMap : function (gen_pfmap) {
+			console.log("call gen path map");
+			console.log(gen_pfmap);
+			neighbor_offsets = [[0, 1], [1, 0], [0, -1], [-1, 0]];
+			pathMap          = [];
+			for (i=0;i<config.sizeMapX;i++) {
+				pathMap.push([]);
+			}
+			for (i = 0; i < config.sizeMapX; i++) {
+				for (j = 0; j < config.sizeMapY; j++) {
+					pathMap[i][j]=0;
+				}
+			}
+			nodeList         = [[game.heroX, game.heroY]];
+			pathMap[game.heroX][game.heroY]  =  1;
+			node_list       = [[game.heroX][game.heroY]];
+			for (node in node_list){
+				//print("---new-node---")
+				score = pathMap[node[0]][node[1]]
+				//print(score)
+				for (neighbor_offset in neighbor_offsets){
+					//print("run over neighbor offsets")
+					neighbor_x = node[0]*1+neighbor_offset[0]*1;
+					neighbor_y = node[1]*1+neighbor_offset[1]*1;
+					if (neighbor_x < 0 ||
+					   neighbor_y < 0 ||
+					   neighbor_x >= config.sizeMapX ||
+					   neighbor_y >= config.sizeMapY){
+						console.log("out of borders - we can not move here "+neighbor_x+";"+neighbor_y);
+						continue
+					}
+					if (gen_pfmap[neighbor_x][neighbor_y] == 0){
+						console.log("not travelable - we can not move here "+neighbor_x+";"+neighbor_y);
+						continue
+					}
+					if (gen_pfmap[neighbor_x][neighbor_y] == 1){
+						console.log("travelable - we could move there " + neighbor_x + ";" + neighbor_y);
+						if (neighbor_x == start[0] && neighbor_y == start[1]) {
+							console.log("we found the target!");
+							pathMap[neighbor_x][neighbor_y] = score*1 + 1
+						} else {
+							if (pathMap[neighbor_x][neighbor_y] == 0){
+								console.log("can move here "+neighbor_x+";"+neighbor_y);
+								node_list.push([neighbor_x, neighbor_y]);
+								pathMap[neighbor_x][neighbor_y] = score*1 + 1;
+								continue
+							} else {
+								console.log("we already have been here " + neighbor_x + ";" + neighbor_y);
+								continue
+							}
+						}
+					}
+				}
+				//print("-----")
+				console.log("---the pathMap----");
+				console.log(pathMap);
+				return pathMap;
+			}
+			return 0;
 		},
 		checkCollisionWithBordersOfMap : function (changeX, changeY) {
 			if (game.heroX+changeX<0){
@@ -2089,7 +2267,7 @@
 					}
 					var purse_diff = gold_was_purse - game.myhero.gold;
 					if (purse_diff !== 0) {
-						console.log("we paid from hero's purse to " + paidTurkopols + " and paid " + purse_diff);
+						console.log("we paid from hero's purse to this amount of Tukropols " + paidTurkopols + " and this amount of gold " + purse_diff);
 					}
 					/*------------------------------------------*/
 					var gold_was_treasury = game.gold;
@@ -2106,7 +2284,7 @@
 					}
 					var treasury_diff = gold_was_treasury - game.gold;
 					if (treasury_diff !== 0) {
-						console.log("we paid from treasury to " + UnPaidTurkopols + " and paid " + treasury_diff);
+						console.log("we paid from treasury to this amount of Tukropols " + UnPaidTurkopols + " and this amount of gold " + treasury_diff);
 					}
 					UnPaidTurkopols = 0;
 
@@ -2125,7 +2303,7 @@
 					}
 					var purse_diff = gold_was_purse - game.myhero.gold;
 					if (purse_diff !== 0) {
-						console.log("we paid from hero's purse to " + paidKnights + " and paid " + purse_diff);
+						console.log("we paid from hero's purse to this amount of Knights " + paidKnights + " and this amount of gold " + purse_diff);
 					}
 					/*------------------------------------------*/
 					var gold_was_treasury = game.gold;
@@ -2137,12 +2315,13 @@
 							UnPaidKnights -= 1;
 						}
 						game.gold -= game.hrKnghtsUpkp(UnPaidKnights);
+                        console.log('paid knights was '+paidKnights);//DEBUG
 						paidKnights += UnPaidKnights;
-						game.knights = paidKnights;
+						game.myhero.knights = paidKnights;
 					}
 					var treasury_diff = gold_was_treasury - game.gold;
 					if (treasury_diff !== 0) {
-						console.log("we paid from treasury to " + UnPaidKnights + " and paid " + treasury_diff);
+						console.log("we paid from treasury to this amount of Knights" + UnPaidKnights + " and this amount of gold " + treasury_diff);
 					}
 					UnPaidKnights = 0;
 
@@ -2161,7 +2340,7 @@
 					}
 					var purse_diff = gold_was_purse - game.myhero.gold;
 					if (purse_diff !== 0) {
-						console.log("we paid from hero's purse to " + paidSergeants + " and paid " + purse_diff);
+						console.log("we paid from hero's purse to this amount of Sergeants" + paidSergeants + " and this amount of gold " + purse_diff);
 					}
 					/*------------------------------------------*/
 					flagTreasuryToNull = false;
@@ -2177,15 +2356,17 @@
 								break;
 							}
 						}
+                        paidSergeants += UnPaidSergeants;
 						if (flagTreasuryToNull === true) {
 							game.gold = 0
 						} else {
 							game.gold -= game.hrSrgntsUpkp(UnPaidSergeants);
 						}
+                        game.myhero.sergeants = paidSergeants;
 					}
 					var treasury_diff = gold_was_treasury - game.gold;
 					if (treasury_diff !== 0) {
-						console.log("we paid from treasury to " + UnPaidSergeants + " and paid " + treasury_diff);
+						console.log("we paid from treasury to this amount of Sergeants" + UnPaidSergeants + " and this amount of gold " + treasury_diff);
 					}
 					UnPaidSergeants = 0;
 				} else {//from treasury only
@@ -2425,6 +2606,87 @@
 			if (myobject.id==="btnMoveKnightToGarrison") {
 				document.getElementById("lblTroopsHelp").innerHTML=localeStrings[314];
 			}
+			if (myobject.id==="btnMoveAllSergeantsToHero") {
+				document.getElementById("lblTroopsHelp").innerHTML=localeStrings[331];
+			}
+			if (myobject.id==="btnMoveAllTurkopolsToHero") {
+				document.getElementById("lblTroopsHelp").innerHTML=localeStrings[331];
+			}
+			if (myobject.id==="btnMoveAllKnightsToHero") {
+				document.getElementById("lblTroopsHelp").innerHTML=localeStrings[331];
+			}
+			if (myobject.id==="btnMoveAllTroopsToHero") {
+				document.getElementById("lblTroopsHelp").innerHTML=localeStrings[332];
+			}
+			if (myobject.id==="btnMoveAllSergeantsToGarrison") {
+				document.getElementById("lblTroopsHelp").innerHTML=localeStrings[333];
+			}
+			if (myobject.id==="btnMoveAllTurkopolsToGarrison") {
+				document.getElementById("lblTroopsHelp").innerHTML=localeStrings[333];
+			}
+			if (myobject.id==="btnMoveAllKnightsToGarrison") {
+				document.getElementById("lblTroopsHelp").innerHTML=localeStrings[333];
+			}
+			if (myobject.id==="btnMoveAllTroopsToGarrison") {
+				document.getElementById("lblTroopsHelp").innerHTML=localeStrings[334];
+			}
+
+			if (myobject.id === "btnDismissGarrisonSergeant") {
+				document.getElementById("lblTroopsHelp").innerHTML = localeStrings[339];
+			}
+
+			if (myobject.id === "btnDismissAllGarrisonSergeants") {
+				document.getElementById("lblTroopsHelp").innerHTML = localeStrings[340];
+			}
+
+			if (myobject.id === "btnDismissGarrisonTurkopol") {
+				document.getElementById("lblTroopsHelp").innerHTML = localeStrings[341];
+			}
+
+			if (myobject.id === "btnDismissAllGarrisonTurkopols") {
+				document.getElementById("lblTroopsHelp").innerHTML = localeStrings[342];
+			}
+
+			if (myobject.id === "btnDismissGarrisonKnight") {
+				document.getElementById("lblTroopsHelp").innerHTML = localeStrings[343];
+			}
+
+			if (myobject.id === "btnDismissAllGarrisonKnights") {
+				document.getElementById("lblTroopsHelp").innerHTML = localeStrings[344];
+			}
+
+			if (myobject.id === "btnDismissAllGarrisonForces") {
+				document.getElementById("lblTroopsHelp").innerHTML = localeStrings[345];
+			}
+
+			if (myobject.id === "btnDismissHeroSergeant") {
+				document.getElementById("lblTroopsHelp").innerHTML = localeStrings[346];
+			}
+
+			if (myobject.id === "btnDismissAllHeroSergeants") {
+				document.getElementById("lblTroopsHelp").innerHTML = localeStrings[347];
+			}	
+
+			if (myobject.id === "btnDismissHeroTurkopol") {
+				document.getElementById("lblTroopsHelp").innerHTML = localeStrings[348];
+			}
+
+			if (myobject.id === "btnDismissAllHeroTurkopols") {
+				document.getElementById("lblTroopsHelp").innerHTML = localeStrings[349];
+			}
+
+			if (myobject.id === "btnDismissHeroKnight") {
+				document.getElementById("lblTroopsHelp").innerHTML = localeStrings[350];
+			}
+
+			if (myobject.id === "btnDismissAllHeroKnights") {
+				document.getElementById("lblTroopsHelp").innerHTML = localeStrings[351];
+			}			
+
+			if (myobject.id === "btnDismissAllHeroForces") {
+				document.getElementById("lblTroopsHelp").innerHTML = localeStrings[352];
+			}
+
 		},
 		heroExists: function () {
 			return (Object.keys(game.myhero).length === 0 && game.myhero.constructor === Object) ? false : true;
@@ -2549,6 +2811,7 @@
 					game.sergeants += 1;
 					game.gold      -= 20;
 					updateTroopsNumbers();
+                    updateResources();
 				} else {
 					msg = "<b>%arg1</b>";
 					msg = msg.replace("%arg1",localeStrings[20]);
@@ -2567,6 +2830,7 @@
 						game.turkopols += 1;
 						game.gold -= 20;
 						updateTroopsNumbers();
+                        updateResources();
 					} else {
 						msg = "<b>%arg1</b>";
 						msg = msg.replace("%arg1", localeStrings[20]);
@@ -2589,6 +2853,7 @@
 					game.knights   += 1;
 					game.gold      -= 40;
 					updateTroopsNumbers();
+                    updateResources();
 				} else {
 					msg = "<b>%arg1</b>";
 					msg = msg.replace("%arg1", localeStrings[20]);
@@ -2612,6 +2877,13 @@
 					postEventLog(msg);
 				}
 			}
+			console.group("%c Garrison sergeants", "background-color: #090; color: #fff; padding: 0 10px;");
+			console.log("%c Sergeants: ", "color: #090;", game.sergeants);
+			console.groupEnd();
+
+			console.group("%c Hero sergeants", "background-color: blue; color: #fff; padding: 0 10px;");
+			console.log("%c Sergeants: ", "color: blue;", game.myhero.sergeants);
+			console.groupEnd();
 		},
 		moveTurkopolsToHero : function () {
 			if (game.myhero.status===0){
@@ -2625,6 +2897,13 @@
 					postEventLog(msg);
 				}
 			}
+			console.group("%c Garrison turkopols", "background-color: #090; color: #fff; padding: 0 10px;");
+			console.log("%c Turkopols: ", "color: #090;", game.turkopols);
+			console.groupEnd();
+
+			console.group("%c Hero turkopols", "background-color: blue; color: #fff; padding: 0 10px;");
+			console.log("%c Turkopols: ", "color: blue;", game.myhero.turkopols);
+			console.groupEnd();
 		},
 		moveKnightsToHero : function () {
 			if (game.myhero.status===0){
@@ -2638,7 +2917,85 @@
 					postEventLog(msg);
 				}
 			}
+			
+			console.group("%c Garrison knights", "background-color: #090; color: #fff; padding: 0 10px;");
+			console.log("%c Knights: ", "color: #090;", game.knights);
+			console.groupEnd();
+
+			console.group("%c Hero knights", "background-color: blue; color: #fff; padding: 0 10px;");
+			console.log("%c Knights: ", "color: blue;", game.myhero.knights);
+			console.groupEnd();
 		},
+
+		//--- Move troops to hero by type functionality: Start ---//
+		moveAllSergeantsToHero: function () {
+			if (game.myhero.status === 0) {
+				if (game.sergeants>0) {
+					var sergantsCount = game.sergeants;
+					game.sergeants -= sergantsCount;
+					game.myhero.sergeants += sergantsCount;
+					updateTroopsNumbers();
+				} else {
+					msg = "<b>%arg1</b>";
+					msg = msg.replace("%arg1",localeStrings[315]);
+					postEventLog(msg);
+				}
+			}
+			console.group("%c Garrison sergeants", "background-color: #090; color: #fff; padding: 0 10px;");
+			console.log("%c Sergeants: ", "color: #090;", game.sergeants);
+			console.groupEnd();
+
+			console.group("%c Hero sergeants", "background-color: blue; color: #fff; padding: 0 10px;");
+			console.log("%c Sergeants: ", "color: blue;", game.myhero.sergeants);
+			console.groupEnd();
+		},
+		moveAllTurkopolsToHero: function () {
+			if (game.myhero.status===0){
+				if (game.turkopols>0) {
+					var turkopolsCount = game.turkopols;
+					game.turkopols -= turkopolsCount;
+					game.myhero.turkopols += turkopolsCount;
+					updateTroopsNumbers();
+				} else {
+					msg = "<b>%arg1</b>";
+					msg = msg.replace("%arg1",localeStrings[315]);
+					postEventLog(msg);
+				}
+			}
+
+			console.group("%c Garrison turkopols", "background-color: #090; color: #fff; padding: 0 10px;");
+			console.log("%c Turkopols: ", "color: #090;", game.turkopols);
+			console.groupEnd();
+
+			console.group("%c Hero turkopols", "background-color: blue; color: #fff; padding: 0 10px;");
+			console.log("%c Turkopols: ", "color: blue;", game.myhero.turkopols);
+			console.groupEnd();
+
+		},
+		moveAllKnightsToHero: function () {
+			if (game.myhero.status===0){
+				if (game.knights>0) {
+					var knightsCount = game.knights;
+					game.knights -= knightsCount;
+					game.myhero.knights += knightsCount;
+					updateTroopsNumbers();
+				} else {
+					msg = "<b>%arg1</b>";
+					msg = msg.replace("%arg1",localeStrings[315]);
+					postEventLog(msg);
+				}
+			}
+
+			console.group("%c Garrison knights", "background-color: #090; color: #fff; padding: 0 10px;");
+			console.log("%c Knights: ", "color: #090;", game.knights);
+			console.groupEnd();
+
+			console.group("%c Hero knights", "background-color: blue; color: #fff; padding: 0 10px;");
+			console.log("%c Knights: ", "color: blue;", game.myhero.knights);
+			console.groupEnd();
+		},
+		//--- Move troops to hero by type functionality: End ---//
+
 		moveSergeantsToGarnison : function () {
 			if (game.myhero.status===0){
 				if (game.myhero.sergeants>0) {
@@ -2651,6 +3008,13 @@
 					postEventLog(msg);
 				}
 			}
+			console.group("%c Garrison sergeants", "background-color: #090; color: #fff; padding: 0 10px;");
+			console.log("%c Sergeants: ", "color: #090;", game.sergeants);
+			console.groupEnd();
+
+			console.group("%c Hero sergeants", "background-color: blue; color: #fff; padding: 0 10px;");
+			console.log("%c Sergeants: ", "color: blue;", game.myhero.sergeants);
+			console.groupEnd();
 		},
 		moveTurkopolsToGarnison : function () {
 			if (game.myhero.status===0){
@@ -2664,6 +3028,13 @@
 					postEventLog(msg);
 				}
 			}
+			console.group("%c Garrison turkopols", "background-color: #090; color: #fff; padding: 0 10px;");
+			console.log("%c Turkopols: ", "color: #090;", game.turkopols);
+			console.groupEnd();
+
+			console.group("%c Hero turkopols", "background-color: blue; color: #fff; padding: 0 10px;");
+			console.log("%c Turkopols: ", "color: blue;", game.myhero.turkopols);
+			console.groupEnd();
 		},
 		moveKnightsToGarnison : function () {
 			if (game.myhero.status===0){
@@ -2677,7 +3048,461 @@
 					postEventLog(msg);
 				}
 			}
+
+			console.group("%c Garrison knights", "background-color: #090; color: #fff; padding: 0 10px;");
+			console.log("%c Knights: ", "color: #090;", game.knights);
+			console.groupEnd();
+
+			console.group("%c Hero knights", "background-color: blue; color: #fff; padding: 0 10px;");
+			console.log("%c Knights: ", "color: blue;", game.myhero.knights);
+			console.groupEnd();
 		},
+
+		//--- Move troops by type to garrison: Start ---//
+		moveAllSergeantsToGarrison : function () {
+			if (game.myhero.status===0){
+				if (game.myhero.sergeants>0) {
+					var heroSergeantsCount = game.myhero.sergeants;
+					game.sergeants += heroSergeantsCount;
+					game.myhero.sergeants -= heroSergeantsCount;
+					updateTroopsNumbers();
+				} else {
+					msg = "<b>%arg1</b>";
+					msg = msg.replace("%arg1",localeStrings[315]);
+					postEventLog(msg);
+				}
+			}
+
+			console.group("%c Garrison sergeants", "background-color: #090; color: #fff; padding: 0 10px;");
+			console.log("%c Sergeants: ", "color: #090;", game.sergeants);
+			console.groupEnd();
+
+			console.group("%c Hero sergeants", "background-color: blue; color: #fff; padding: 0 10px;");
+			console.log("%c Sergeants: ", "color: blue;", game.myhero.sergeants);
+			console.groupEnd();
+
+		},
+		moveAllTurkopolsToGarrison: function () {
+			if (game.myhero.status===0){
+				if (game.myhero.turkopols>0) {
+					var heroTurkopolsCount = game.myhero.turkopols;
+					game.turkopols += heroTurkopolsCount;
+					game.myhero.turkopols -= heroTurkopolsCount;
+					updateTroopsNumbers();
+				} else {
+					msg = "<b>%arg1</b>";
+					msg = msg.replace("%arg1",localeStrings[315]);
+					postEventLog(msg);
+				}
+			}
+
+			console.group("%c Garrison turkopols", "background-color: #090; color: #fff; padding: 0 10px;");
+			console.log("%c Turkopols: ", "color: #090;", game.turkopols);
+			console.groupEnd();
+
+			console.group("%c Hero turkopols", "background-color: blue; color: #fff; padding: 0 10px;");
+			console.log("%c Turkopols: ", "color: blue;", game.myhero.turkopols);
+			console.groupEnd();
+
+		},
+		moveAllKnightsToGarrison: function () {
+			if (game.myhero.status===0){
+				if (game.myhero.knights>0) {
+					var heroKnightsCount = game.myhero.knights;
+					game.knights += heroKnightsCount;
+					game.myhero.knights -= heroKnightsCount;
+					updateTroopsNumbers();
+				} else {
+					msg = "<b>%arg1</b>";
+					msg = msg.replace("%arg1",localeStrings[315]);
+					postEventLog(msg);
+				}
+			}
+
+			console.group("%c Garrison knights", "background-color: #090; color: #fff; padding: 0 10px;");
+			console.log("%c Knights: ", "color: #090;", game.knights);
+			console.groupEnd();
+
+			console.group("%c Hero knights", "background-color: blue; color: #fff; padding: 0 10px;");
+			console.log("%c Knights: ", "color: blue;", game.myhero.knights);
+			console.groupEnd();
+
+		},
+		//--- Move troops by type to garrison: End ---//
+
+
+		// Functions for moving all troops between garrison and hero's squad. Just incase.
+
+		moveAllTroopsToHero: function () {
+			if (game.myhero.status===0) {
+				if (game.sergeants > 0 || game.turkopols > 0 || game.knights > 0) {
+					var sergeantsCount = game.sergeants,
+						turkopolsCount = game.turkopols,
+						knightsCount = game.knights;
+
+						game.myhero.sergeants += sergeantsCount
+						game.myhero.turkopols += turkopolsCount;	
+						game.myhero.knights	+= knightsCount;	
+
+						game.sergeants -= sergeantsCount;
+						game.turkopols -= turkopolsCount;
+						game.knights -= knightsCount;
+						updateTroopsNumbers();
+				} else {
+					msg = "<b>%arg1</b>";
+					msg = msg.replace("%arg1",localeStrings[315]);
+					postEventLog(msg);
+				}
+			}
+
+			console.group("%c Garrison troops", "background-color: #090; color: #fff; padding: 0 10px;");
+			console.log("%c Sergeants: ", "color: #090;", game.sergeants);
+			console.log("%c Turkopols: ", "color: #090;", game.turkopols);
+			console.log("%c Knights: ", "color: #090;", game.knights);
+			console.groupEnd();
+
+			console.group("%c Hero troops", "background-color: blue; color: #fff; padding: 0 10px;");
+			console.log("%c Sergeants: ", "color: blue;", game.myhero.sergeants);
+			console.log("%c Turkopols: ", "color: blue;", game.myhero.turkopols);
+			console.log("%c Knights: ", "color: blue;", game.myhero.knights);
+			console.groupEnd();
+
+
+
+		},
+
+		moveAllTroopsToGarrison: function () {
+			if (game.myhero.status===0) {
+				if (game.myhero.sergeants > 0 || game.myhero.turkopols > 0 || game.myhero.knights > 0) {
+					var sergeantsCount = game.myhero.sergeants,
+						turkopolsCount = game.myhero.turkopols,
+						knightsCount = game.myhero.knights;
+
+						game.sergeants += sergeantsCount
+						game.turkopols += turkopolsCount;	
+						game.knights	+= knightsCount;	
+
+						game.myhero.sergeants -= sergeantsCount;
+						game.myhero.turkopols -= turkopolsCount;
+						game.myhero.knights -= knightsCount;
+						updateTroopsNumbers();
+				} else {
+					msg = "<b>%arg1</b>";
+					msg = msg.replace("%arg1",localeStrings[315]);
+					postEventLog(msg);
+				}
+			}
+
+			console.group("%c Garrison troops", "background-color: #090; color: #fff; padding: 0 10px;");
+			console.log("%c Sergeants: ", "color: #090;", game.sergeants);
+			console.log("%c Turkopols: ", "color: #090;", game.turkopols);
+			console.log("%c Knights: ", "color: #090;", game.knights);
+			console.groupEnd();
+
+			console.group("%c Hero troops", "background-color: blue; color: #fff; padding: 0 10px;");
+			console.log("%c Sergeants: ", "color: blue;", game.myhero.sergeants);
+			console.log("%c Turkopols: ", "color: blue;", game.myhero.turkopols);
+			console.log("%c Knights: ", "color: blue;", game.myhero.knights);
+			console.groupEnd();
+
+		},
+
+
+		
+		//-- Dismiss garrison troops by one  --//
+		dismissGarrisonSergeant: function() {
+			if (game.sergeants > 0) {
+				question = localeStrings[353];
+				showModal(1, '', game.dismissGarrisonSergeantCallback, question, localeStrings[32], localeStrings[33]);
+			} else {
+				msg = "<b>%arg1</b>";
+				msg = msg.replace("%arg1", localeStrings[367]);
+				postEventLog(msg);
+			}
+		},
+
+		dismissGarrisonSergeantCallback: function () {
+			if (answer == 2) {
+				game.sergeants--;
+				updateTroopsNumbers();
+			}
+		},
+
+		dismissGarrisonTurkopol: function() {
+			if (game.turkopols > 0) {
+				question = localeStrings[354];
+				showModal(1, '', game.dismissGarrisonTurkopolCallback, question, localeStrings[32], localeStrings[33]);
+			} else {
+				msg = "<b>%arg1</b>";
+				msg = msg.replace("%arg1", localeStrings[368]);
+				postEventLog(msg);
+			}
+		},
+
+		dismissGarrisonTurkopolCallback: function () {
+			if (answer == 2) {
+				game.turkopols--;
+				updateTroopsNumbers();
+			}
+		},
+
+		dismissGarrisonKnight: function() {
+			if (game.knights > 0) {
+				question = localeStrings[355];
+				showModal(1, '', game.dismissGarrisonKnightCallback, question, localeStrings[32], localeStrings[33]);
+			} else {
+				msg = "<b>%arg1</b>";
+				msg = msg.replace("%arg1", localeStrings[369]);
+				postEventLog(msg);
+			}
+		},
+
+		dismissGarrisonKnightCallback: function () {
+			if (answer == 2) {
+				game.knights--;
+				updateTroopsNumbers();
+			}
+		},
+		//-- /Dismiss garrison troops by one  --//
+
+
+		//-- Dismiss all garrison troops by type --//
+		dismissAllGarrisonSergenats: function() {
+			if (game.sergeants > 0) {
+				question = localeStrings[356];
+				showModal(1, '', game.dismissAllGarrisonSergenatsCallback, question, localeStrings[32], localeStrings[33]);
+			} else {
+				msg = "<b>%arg1</b>";
+				msg = msg.replace("%arg1", localeStrings[367]);
+				postEventLog(msg);
+			}
+		},
+
+		dismissAllGarrisonSergenatsCallback: function () {
+			if (answer == 2) {
+				game.sergeants = 0;
+				updateTroopsNumbers();
+			}
+		},
+
+		dismissAllGarrisonTurkopols: function () {
+			if (game.turkopols > 0) {
+				question = localeStrings[357];
+				showModal(1, '', game.dismissAllGarrisonTurkopolsCallback, question, localeStrings[32], localeStrings[33]);
+			} else {
+				msg = "<b>%arg1</b>";
+				msg = msg.replace("%arg1", localeStrings[368]);
+				postEventLog(msg);
+			}
+		},
+
+		dismissAllGarrisonTurkopolsCallback: function () {
+			if (answer == 2) {
+				game.turkopols = 0;
+				updateTroopsNumbers();
+			}
+		},
+
+		dismissAllGarrisonKnights: function () {
+			if (game.knights > 0) {
+				question = localeStrings[358];
+				showModal(1, '', game.dismissAllGarrisonKnightsCallback, question, localeStrings[32], localeStrings[33]);
+			} else {
+				msg = "<b>%arg1</b>";
+				msg = msg.replace("%arg1", localeStrings[369]);
+				postEventLog(msg);
+			}
+		},
+
+		dismissAllGarrisonKnightsCallback: function () {
+			if (answer == 2) {
+				game.knights = 0;
+				updateTroopsNumbers()
+			}
+		},
+		//-- /Dismiss all garrison troops by type --//
+
+
+		//-- Dismiss heroe's troops by one --//
+		dismissHeroSergeant: function() {
+			console.log(game.hero);
+			if (game.myhero.sergeants > 0) {
+				question = localeStrings[359];
+				showModal(1, '', game.dismissHeroSergeantCallback, question, localeStrings[32], localeStrings[33]);
+			} else {
+				msg = "<b>%arg1</b>";
+				msg = msg.replace("%arg1", localeStrings[370]);
+				postEventLog(msg);
+			}
+		},
+
+		dismissHeroSergeantCallback: function () {
+			if (answer == 2) {
+				console.log('Hero sergeants: ', game.myhero);
+				game.myhero.sergeants--;
+				updateTroopsNumbers();
+			}
+		},
+
+		dismissHeroTurkopol: function () {
+			if (game.myhero.turkopols > 0) {
+				question = localeStrings[360];
+				showModal(1, '', game.dismissHeroTurkopolCallback, question, localeStrings[32], localeStrings[33]);
+			} else {
+				msg = "<b>%arg1</b>";
+				msg = msg.replace("%arg1", localeStrings[371]);
+				postEventLog(msg);
+			}
+		},
+
+		dismissHeroTurkopolCallback: function () {
+			if (answer == 2) {
+				game.myhero.turkopols--;
+				updateTroopsNumbers();
+			}
+		},
+
+		dismissHeroKnight: function () {
+			if (game.myhero.knights > 0) {
+				question = localeStrings[361];
+				showModal(1, '', game.dismissHeroKnightCallback, question, localeStrings[32], localeStrings[33]);
+			} else {
+				msg = "<b>%arg1</b>";
+				msg = msg.replace("%arg1", localeStrings[372]);
+				postEventLog(msg);
+			}
+		},
+
+		dismissHeroKnightCallback: function () {
+			if (answer == 2) {
+				game.myhero.knights--;
+				updateTroopsNumbers();
+			}
+		},
+		//-- /Dismiss heroe's troops by one --//
+
+
+		//-- Dismiss heroe's troops by type --//
+		dismissAllHeroSergeants: function () {
+			if (game.myhero.sergeants > 0) {
+				question = localeStrings[362];
+				showModal(1, '', game.dismissAllHeroSergeantsCallback, question, localeStrings[32], localeStrings[33]);
+			} else {
+				msg = "<b>%arg1</b>";
+				msg = msg.replace("%arg1", localeStrings[370]);
+				postEventLog(msg);
+			}
+		},
+
+		dismissAllHeroSergeantsCallback: function () {
+			if (answer == 2) {
+				game.myhero.sergeants = 0;
+				updateTroopsNumbers();
+			}
+		},
+
+		dismissAllHeroTurkopols: function () {
+			if (game.myhero.turkopols > 0) {
+				question = localeStrings[363];
+				showModal(1, '', game.dismissAllHeroTurkopolsCallback, question, localeStrings[32], localeStrings[33]);
+			} else {
+				msg = "<b>%arg1</b>";
+				msg = msg.replace("%arg1", localeStrings[371]);
+				postEventLog(msg);
+			}
+		},
+
+		dismissAllHeroTurkopolsCallback: function () {
+			if (answer == 2) {
+				game.myhero.turkopols = 0;
+				updateTroopsNumbers();
+			}
+		},
+
+		dismissAllHeroKnights: function () {
+			if (game.myhero.knights > 0) {
+				question = localeStrings[364];
+				showModal(1, '', game.dismissAllHeroKnightsCallback, question, localeStrings[32], localeStrings[33]);
+			} else {
+				msg = "<b>%arg1</b>";
+				msg = msg.replace("%arg1", localeStrings[372]);
+				postEventLog(msg);
+			}
+		},
+
+		dismissAllHeroKnightsCallback: function () {
+			if (answer == 2) {
+				game.myhero.knights = 0;
+				updateTroopsNumbers();
+			}
+		},
+
+		//-- /Dismiss heroe's troops by type --//
+		
+
+		//-- Dismiss all forces --//
+		dismissAllGarrisonForces: function () {
+			if (game.sergeants > 0 || game.turkopols > 0 || game.knights > 0) {
+				var garrisonSergeantsStr = '', garrisonTurkopolsStr = '', garrisonKnightsStr = '';
+				if (game.sergeants > 0) {
+					garrisonSergeantsStr = localeStrings[375].replace("%arg1", game.sergeants);
+				}
+				if (game.turkopols > 0) {
+					garrisonTurkopolsStr = localeStrings[376].replace("%arg1", game.turkopols);
+				}
+				if (game.knights > 0) {
+					garrisonKnightsStr = localeStrings[377].replace("%arg1", game.knights);
+				}
+				question = localeStrings[365].replace("%arg1", garrisonSergeantsStr).replace("%arg2", garrisonTurkopolsStr).replace("%arg3", garrisonKnightsStr);
+				showModal(1, '', game.dismissAllGarrisonForcesCallback, question, localeStrings[32], localeStrings[33]);
+			} else {
+				msg = "<b>%arg1</b>";
+				msg = msg.replace("%arg1", localeStrings[373]);
+				postEventLog(msg);
+			}
+		},
+
+		dismissAllGarrisonForcesCallback: function () {
+			if (answer == 2) {
+				game.sergeants = 0;
+				game.turkopols = 0;
+				game.knights = 0;
+				updateTroopsNumbers();
+			}
+		},
+
+		dismissAllHeroForces: function () {
+			if (game.myhero.sergeants > 0 || game.myhero.turkopols > 0 || game.myhero.knights > 0) {
+				var heroSergeantsStr = '', heroTurkopolsStr = '', heroKnightsStr = '';
+				if (game.myhero.sergeants > 0) {
+					heroSergeantsStr = localeStrings[375].replace("%arg1", game.myhero.sergeants);
+				}
+				if (game.myhero.turkopols > 0) {
+					heroTurkopolsStr = localeStrings[376].replace("%arg1", game.myhero.turkopols);
+				}
+				if (game.myhero.knights > 0) {
+					heroKnightsStr = localeStrings[377].replace("%arg1", game.myhero.knights);
+				}
+				question = localeStrings[366].replace("%arg1", heroSergeantsStr).replace("%arg2", heroTurkopolsStr).replace("%arg3", heroKnightsStr);
+				showModal(1, '', game.dismissAllHeroForcesCallback, question, localeStrings[32], localeStrings[33]);
+			} else {
+				msg = "<b>%arg1</b>";
+				msg = msg.replace("%arg1", localeStrings[374]);
+				postEventLog(msg);
+			}
+		},
+
+		dismissAllHeroForcesCallback: function () {
+			if (answer == 2) {
+				game.myhero.sergeants = 0;
+				game.myhero.turkopols = 0;
+				game.myhero.knights = 0;
+				updateTroopsNumbers();
+			}
+		},
+		//-- /Dismiss all forces --//
+		
+
 		goldLimit : function () {
 			return Math.pow(config.costTreasury,(game.buildLevelTreasury*1+1))*2+500;
 		},
@@ -2691,6 +3516,7 @@
 		},
 		calculateTurn : function() {
 			var gold_was = game.gold;
+			//console.log("%c GOLD BEFORE UPDATE: ", "color: red", gold_was);
 			game.recordStats();
 			game.getNearestEventTime();
 			pop_m         = 0;
@@ -2734,8 +3560,15 @@
 					//fire guards which we cannot afford
 					//for now fire all guards!
 					//TODO fire only those who we cannot afford
-					game.treasuryGuard = 0;
-					msg   = localeStrings[37];
+					var canUpkeep = Math.floor(game.gold/config.treasuryGuardPricePayroll);
+					var dissmisedTreasuryGuard = game.treasuryGuard - canUpkeep;
+					game.treasuryGuard = canUpkeep;
+					game.gold -= (canUpkeep * config.treasuryGuardPricePayroll);
+					console.group("%c Treausury guard: ", "background-color: cyan; color: #333");
+					console.log("Treasury guard: ", game.treasuryGuard);
+					console.groupEnd();
+
+					msg = (canUpkeep > 0) ? localeStrings[335].replace("%arg1", dissmisedTreasuryGuard) : localeStrings[37];
 					postEventLog(msg);
 				}
 			}
@@ -2747,8 +3580,17 @@
 					//fire guards which we cannot afford
 					//for now fire all guards!
 					//TODO fire only those who we cannot afford
-					game.sergeants = 0;
-					msg   = localeStrings[280];
+					
+					var canUpkeep = Math.floor(game.gold/config.sergeantUpkeep);
+					var dismissedSergeants = game.sergeants - canUpkeep;
+					game.sergeants = canUpkeep;
+					game.gold -= (canUpkeep * config.sergeantUpkeep);
+
+					console.group("%c Sergeants: ", "background-color: cyan; color: #333");
+					console.log("Sergeants: ", game.sergeants);
+					console.groupEnd();
+
+					msg = (canUpkeep > 0) ? localeStrings[336].replace("%arg1", dismissedSergeants) : localeStrings[280];
 					postEventLog(msg);
 				}
 			}
@@ -2760,8 +3602,17 @@
 					//fire guards which we cannot afford
 					//for now fire all guards!
 					//TODO fire only those who we cannot afford
-					game.turkopols = 0;
-					msg   = localeStrings[281];
+
+					var canUpkeep = Math.floor(game.gold/config.turkopolUpkeep);
+					var dismissedTurkopols = game.turkopols - canUpkeep;
+					game.turkopols = canUpkeep;
+					game.gold -= (canUpkeep * config.turkopolUpkeep);
+
+					console.group("%c Turkopols: ", "background-color: cyan; color: #333");
+					console.log("Turkopols: ", game.turkopols);
+					console.groupEnd();
+
+					msg = (canUpkeep > 0) ? localeStrings[337].replace("%arg1", dismissedTurkopols) : localeStrings[281];
 					postEventLog(msg);
 				}
 			}
@@ -2773,8 +3624,18 @@
 					//fire guards which we cannot afford
 					//for now fire all guards!
 					//TODO fire only those who we cannot afford
-					game.knights = 0;
-					msg   = localeStrings[282];
+
+
+					var canUpkeep = Math.floor(game.gold/config.knightUpkeep);
+					var dismissedKnights = game.knights - canUpkeep;
+					game.knights = canUpkeep;
+					game.gold -= (canUpkeep * config.knightUpkeep);
+
+					console.group("%c Knights: ", "background-color: cyan; color: #333");
+					console.log("Knights: ", game.knights);
+					console.groupEnd();
+
+					msg = (canUpkeep > 0) ? localeStrings[338].replace("%arg1", dismissedKnights) : localeStrings[282];
 					postEventLog(msg);
 				}
 			}
@@ -2803,6 +3664,9 @@
 					document.getElementById("divFBProgress").innerHTML = localeStrings[275].replace("%arg1",fireProgress);
 				}
 			}
+
+			//console.log("%c GOLD AFTER UPKEEP PAYMENTS: ", "color: blue", game.gold);
+
 			taxes = Math.round(game.pop*(1+game.buildLevelGallows*1/10),0);
 			game.addMoneyToTreasury(taxes);
 			if (game.gold !== gold_was) {
@@ -2827,6 +3691,7 @@
 				//ym(47225574, 'reachGoal', 'min5');
 				//return true;
 			}
+			//console.log("GOLD AFTER UPDATE: ", game.gold);
 			updateUI();
 			game.getReward();
 		},
@@ -3794,6 +4659,7 @@
 		document.getElementById("btnGoldNext").innerText         = localeStrings[159];
 		document.getElementById("btnPopAtEnd").innerText         = localeStrings[160];
 		document.getElementById("btnGoldAtEnd").innerText        = localeStrings[160];
+        document.getElementById("downloadGame").innerText        = localeStrings[328];
 		welcomeMsg();
 		updateButtonCaptions();
 		updateHeroStatus();
@@ -3809,8 +4675,22 @@
 		postEventLog(localeStrings[1]);
 		postEventLog(localeStrings[2]);
 	}
-	function postEventLog(msgEventLog) {
-		document.getElementById("console_n_chat").innerHTML = document.getElementById("console_n_chat").innerHTML+"<br>"+getTime(0)+": "+msgEventLog;
+	function postEventLog(msgEventLog, styling) {
+        if (typeof variable !== 'undefined') {
+            styling = styling.toUpperCase();
+        } else {
+            styling = "";
+        }
+        if (styling.indexOf("BOLD")!==-1){
+            msgEventLog = "<b>"+msgEventLog+"</b>";
+        }
+        if (styling.indexOf("ITALIC")!==-1){
+            msgEventLog = "<i>"+msgEventLog+"</i>";
+        }
+        if (styling.indexOf("RED")!==-1){
+            msgEventLog = "<font color='red'>"+msgEventLog+"</font>";
+        }
+		document.getElementById("console_n_chat").innerHTML += getTime(0)+": "+msgEventLog+"<br>";
 		scrollDown();
 	}
 	function clearJournalLog() {
@@ -3822,6 +4702,16 @@
 		scrollDown();
 	}
 	function populatePatchnotes() {
+        msg = "version 1.0.327";
+		writeToTextArea(msg);
+		msg = "added a link to download game to play it offline";
+		writeToTextArea(msg);
+        
+        msg = "version 1.0.326";
+		writeToTextArea(msg);
+		msg = "Fixed bug with dismissed hero";
+		writeToTextArea(msg);
+        
 		msg = "version 1.0.325";
 		writeToTextArea(msg);
 		msg = "Now you could resize the event log";
@@ -4207,7 +5097,7 @@
 	}
 	function importGame() {
 		save64 = document.getElementById("savestring").value;
-		if (save64 != null) {
+		if (save64 !== "" ) {
 			try {
 				console.log("we try to load the imported save");
 				saveLine  = atob(save64);
@@ -4216,9 +5106,12 @@
 				overrideGame(gameTemp);
 			}
 			catch(err) {
+                postEventLog(localeStrings[327],"bold,red");
 				console.log(err);
 			}
-		}
+		} else {
+            postEventLog(localeStrings[326],"bold");
+        }
 	}
 	function saveGame(saveConfirmation) {
 		if (saveConfirmation=="silent") {
@@ -4404,11 +5297,21 @@
 				heroStatusNeedsUpdate = false;
 				document.getElementById("btnAutocampaign").innerText=localeStrings[218];
 				document.getElementById("btnAutocampaign").style.visibility="visible";
+                document.getElementById("btnAutocampaign").disabled = false;
+                document.getElementById("btnAutocampaign").style.visibility="visible";
 				document.getElementById("btnAutocampaignJournal").style.visibility="visible";
 				document.getElementById("trHeroHiringTroops").style.visibility="visible";
 				document.getElementById("btnMoveSergeantToHero").style.visibility="visible";
 				document.getElementById("btnMoveTurkopolToHero").style.visibility="visible";
 				document.getElementById("btnMoveKnightToHero").style.visibility="visible";
+
+				//--- Move troops to hero buttons visible: Start ---//
+				document.getElementById("btnMoveAllSergeantsToHero").style.visibility="visible";
+				document.getElementById("btnMoveAllTurkopolsToHero").style.visibility="visible";
+				document.getElementById("btnMoveAllKnightsToHero").style.visibility="visible";
+				document.getElementById("btnMoveAllTroopsToHero").style.visibility="visible";
+				//--- Move troops to hero buttons visible: End ---//
+                
 				if (game.myhero.class===0) {
 					document.getElementById("imgHeroInHiringScreenKnight").style.display="block";
 					document.getElementById("imgHeroInHiringScreenMonk").style.display="none";
@@ -4436,6 +5339,14 @@
 				document.getElementById("btnMoveSergeantToHero").style.visibility="hidden";
 				document.getElementById("btnMoveTurkopolToHero").style.visibility="hidden";
 				document.getElementById("btnMoveKnightToHero").style.visibility="hidden";
+
+				//--- Move troops to hero buttons hidden: Start ---//
+				document.getElementById("btnMoveAllSergeantsToHero").style.visibility="hidden";
+				document.getElementById("btnMoveAllTurkopolsToHero").style.visibility="hidden";
+				document.getElementById("btnMoveAllKnightsToHero").style.visibility="hidden";
+				document.getElementById("btnMoveAllTroopsToHero").style.visibility="hidden";
+				//--- Move troops to hero buttons hidden: End ---//
+
 			}
 			if (game.myhero.status===2){
 				var rnd = Math.floor(Math.random() * localeStrings[212].length);
@@ -4450,6 +5361,13 @@
 				document.getElementById("btnMoveSergeantToHero").style.visibility="hidden";
 				document.getElementById("btnMoveTurkopolToHero").style.visibility="hidden";
 				document.getElementById("btnMoveKnightToHero").style.visibility="hidden";
+
+				//--- Move troops to hero buttons hidden: Start ---//
+				document.getElementById("btnMoveAllSergeantsToHero").style.visibility="hidden";
+				document.getElementById("btnMoveAllTurkopolsToHero").style.visibility="hidden";
+				document.getElementById("btnMoveAllKnightsToHero").style.visibility="hidden";
+				document.getElementById("btnMoveAllTroopsToHero").style.visibility="hidden";
+				//--- Move troops to hero buttons hidden: End ---//
 			}
 			if (heroStatusNeedsUpdate === true) {
 				game.myhero.status = 0;
@@ -4485,6 +5403,13 @@
 			document.getElementById("btnMoveSergeantToHero").style.visibility="hidden";
 			document.getElementById("btnMoveTurkopolToHero").style.visibility="hidden";
 			document.getElementById("btnMoveKnightToHero").style.visibility="hidden";
+
+			//--- Move troops to hero buttons hidden: Start ---//
+			document.getElementById("btnMoveAllSergeantsToHero").style.visibility="hidden";
+			document.getElementById("btnMoveAllTurkopolsToHero").style.visibility="hidden";
+			document.getElementById("btnMoveAllKnightsToHero").style.visibility="hidden";
+			document.getElementById("btnMoveAllTroopsToHero").style.visibility="hidden";
+			//--- Move troops to hero buttons hidden: End ---//
 		}
 	}
 	function updateTroopsNumbers() {
