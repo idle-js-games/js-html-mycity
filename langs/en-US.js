@@ -1,7 +1,7 @@
 var localeStrings = [];
-localeStrings.push("Hello player in this incremental game!");
-localeStrings.push("Your task is simple - manage the city as mayor of the city!");
-localeStrings.push("Citizen will pay taxes each season (30 secs) and population will grow each season");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
 localeStrings.push("build or upgrade your Treasury");
 localeStrings.push("amount of money is increased");
 localeStrings.push("amount of money is decreased");//5
@@ -54,7 +54,7 @@ localeStrings.push("How To Play");
 localeStrings.push("Discord");
 localeStrings.push("Put out the fire");
 localeStrings.push("Execute somebody");
-localeStrings.push("shit happens: the plague killed %arg1 citizens");//55
+localeStrings.push("placeholder");//55
 localeStrings.push("Do you want to place a festival?\nIt would cost to you %arg1 gold!\n");
 localeStrings.push("Festival was placed not so long ago.\nThe effect from festival would be weaken.\n");
 localeStrings.push(["The event item collected!","Your pledge is recorded!"]);
@@ -89,7 +89,7 @@ localeStrings.push("Your nickname");
 localeStrings.push("Update");
 localeStrings.push(["Your nickname is registered","Your nickname is updated","Sorry, but this nicknames is taken"]);
 localeStrings.push("%arg1 gold has been added to your treasury");
-localeStrings.push("Gems are most valued currency");//90
+localeStrings.push("Amber are most valued currency");//90
 localeStrings.push("Garrison");
 localeStrings.push("Fire");
 localeStrings.push("Hire");
@@ -116,7 +116,7 @@ localeStrings.push("Build Stash<br/>lvl %arg1<br/>%arg2 gold");
 localeStrings.push("Build Inn<br/>lvl %arg1<br/>%arg2 gold");
 localeStrings.push("Build Stable<br/>lvl %arg1<br/>%arg2 gold");//115
 localeStrings.push("Build Archery range<br/>lvl %arg1<br/>%arg2 gold");
-localeStrings.push("placeholder");
+localeStrings.push("Build Castle<br/>lvl %arg1<br/>%arg2 gold");//117
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");//120
@@ -132,6 +132,8 @@ localeStrings.push("placeholder");
 localeStrings.push("placeholder");//130
 localeStrings.push("<h1>1255 Burgomaster</h1>" +
     "<h2>How to play</h2>" +
+   'wiki <a href="https://github.com/Areso/1255-burgomaster/wiki">https://github.com/Areso/1255-burgomaster/wiki</a><br>' +
+     'feedback <a href="https://form.jotform.com/211014175318041">https://form.jotform.com/211014175318041</a><br>' +
     "This game has some clock under the hood. Each clock's tick happens in 30 seconds.<br>" +
     "After each clock turn your population is paying taxes to you and growing.<br>" +
     "Normally, each citizen pays to you one gold piece per tick.<br>" +
@@ -216,7 +218,7 @@ localeStrings.push("luck");
 localeStrings.push("superstition");
 localeStrings.push("morale");//185
 localeStrings.push("the hero found some money: ");
-localeStrings.push("placeholder");
+localeStrings.push("Intelligence");
 localeStrings.push("placeholder");
 localeStrings.push("Level");
 localeStrings.push("Attack");//190
@@ -266,10 +268,10 @@ localeStrings.push("This building and its improvements is needed to raise your p
 localeStrings.push("This building and its improvements is needed to raise your money limit.<br>This building allows you to hire treasury guards.<br>They are needed to minimize your chances to be robbed.");
 localeStrings.push("This building and its improvements is needed to execute your citizens.<br>It is also increase taxes and decrease birthrate and happiness.<br>If you build this building, you will not be able to build the Fountain!");//235
 localeStrings.push("This building and its improvements is needed to place festivals.<br>It is also increase birthrate and happiness and decrease taxes.<br>If you build this building, you will not be able to build the Gallows!");
-localeStrings.push("This building and its improvements is needed to save your money from thieves, in case the thieves rob your treasury.<br>The higher level of Stash do you have, the more you could hide in the Stash.");
-localeStrings.push("This building and its improvements is needed to hire heroes.<br>The higher level of Inn do you have, the more experienced hero you could hire there.");
-localeStrings.push("This building and its improvements is needed to hire cavalry units.<br>The higher level of Stable do you have, the more experienced troops you could hire there.");
-localeStrings.push("This building and its improvements is needed to hire archery units.<br>The higher level of Archery range do you have, the more experienced troops you could hire there.");//240
+localeStrings.push("This building and its improvements is needed to save your money from thieves, in case the thieves rob your treasury.<br>The higher level of Stash you have, the more you could hide in the Stash.");
+localeStrings.push("This building and its improvements is needed to hire heroes.<br>The higher level of Inn you have, the more experienced hero you could hire there.");
+localeStrings.push("This building and its improvements is needed to hire cavalry units.<br>The higher level of Stable you have, the more experienced troops you could hire there.");
+localeStrings.push("This building and its improvements is needed to hire archery units.<br>The higher level of Archery range you have, the more experienced troops you could hire there.");//240
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");
@@ -356,7 +358,7 @@ localeStrings.push("placeholder");
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");//325
 localeStrings.push("There is no savestring in the field");
-localeStrings.push("Couldn't load the game from the savestring");
+localeStrings.push("Couldn't load the game from the savestring ;-;");
 localeStrings.push("Download game for playing off-grid (to play without Internet connection)");
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");//330
@@ -408,3 +410,41 @@ localeStrings.push("sergeants(%arg1)"); //375
 localeStrings.push("turkopols(%arg1)");
 localeStrings.push("knights(%arg1)");
 
+locObj = {};
+//locObj.welcome2 = {"txt":"", "loc":""};
+locObj.welcome0 = {"txt":"Hello player in this incremental game!", "loc":"Once game initted, those strings are put to the gamelog"};
+locObj.welcome1 = {"txt":"Your task is simple - manage the city as mayor of the city!", "loc":"same"};
+locObj.welcome2 = {"txt":"Citizen will pay taxes each season (30 secs) and population will grow each season", "loc":"same"};
+locObj.okay = {"txt":"Okay", "loc":"Mostly used in information dialogues"}
+
+locObj.unit_sergeants = {"txt": "Sergeants", "loc": "Autbattle log, player unit"};
+locObj.unit_turkopols = {"txt": "Turkopols", "loc": "Autbattle log, player unit"};
+locObj.unit_knights = {"txt": "Brother-knights", "loc": "Autbattle log, player unit"};
+
+locObj.unit_bandit = {"txt": "Bandits", "loc": "Autbattle log, enemy unit"};
+locObj.unit_bandit_archer = {"txt": "Bandits archers", "loc": "Autbattle log, enemy unit"};
+locObj.unit_merc_swordman = {"txt": "Mercenary swordman", "loc": "Autbattle log, highlevel enemy unit"};
+locObj.unit_merc_spearman = {"txt": "Mercenary spearman", "loc": "Autbattle log, highlevel enemy unit"};
+
+locObj.autobattle_journal_btn = {"txt": "Battle journal", "loc": "Inn window. Battle report by round moves"};
+locObj.autobattle_journal_log_start = {"txt": "Round started", "loc": "Start round title"};
+locObj.autobattle_journal_log_end = {"txt": "Round ended", "loc": "End round title"};
+locObj.autobattle_journal_log_dmg = {"txt": "%arg1 squad does %arg2 dmg to %arg3.", "loc": "Autobattle dmg log"};
+locObj.autobattle_journal_log_dead = {"txt": "%arg1 %arg2 is dead.", "loc": "Autobattle dead log"};
+locObj.autobattle_journal_log_destroyed = {"txt": "%arg1 squad is destroyed.", "loc": "Autobattle destroyed squad log"};
+
+locObj.advmap = {"txt":"To move your hero use arrow keys\nIf you play with sensor input, please turn on Mobile UI in Settings", "loc":"when first visiting adventure map"};
+locObj.plague_turk = {"txt":"On the edge: your turkopol spotted a plague person and shot him. The corpse was burned afterwards", "loc":"Random event. Plague. A turkopol prevents plague in the city"};
+locObj.plague_army = {"txt":"shit happens: the plague outbreak was stopped by your garrison, but killed %arg1 of your garrisoned troops", "loc":"Your army prevents plague in the city. Some soldiers are dead now"};
+locObj.plague = {"txt":"shit happens: the plague killed %arg1 citizens", "loc":"default plague case + case where army failed to prevent outbreak"};
+locObj.city_chest_gold = {"txt":"You found %arg1 gold in a chest!", "loc":"Random event. Opened a short-living chest in city screen"};
+locObj.blackmarket_dstr = {"txt":"A tall, fat-belly green goblin, who named itself Elbenkonig,\n  offered you a variety of magic artifacts.\nYou, as a true Christian, a brother of Teutonic order, were offended by it.\nThe first your intention was to kill the goblin and to burn the market.\nOn the other hand, magical artifacts could prove helpful in this world.\nWhat will you do?", "loc":"This dialogue happens every time you first visit blackmarket on the newly generated map"};
+locObj.blackmarket_dstr_brn = {"txt":"Kill the goblin and burn the blackmarket!", "loc":"Destroying the blackmarket"};
+locObj.blackmarket_dstr_kp = {"txt":"Start trade", "loc":"Keeping the blackmarket"};
+locObj.borderCollide = {"txt":"You hit an invisible border. You couldn't pass any further", "loc":"adventure map. collision with border"};
+
+locObj.campaignTitle = {"txt":"Campaign-%arg1","loc":"Autocampaign accordion title"};
+locObj.autobattleTitle = {"txt": "Battle-%arg1", "loc": "Autobattle log title"};
+
+locObj.upgCostSidebar = {"txt":"Upgrade to %arg1 level costs %arg2 gold", "loc":"Shows under the building description on the left sidebar for upgrades"};
+locObj.bldCostSidebar = {"txt":"Building costs %arg2 gold", "loc":"Shows under the building description on the left sidebar for initial building"};

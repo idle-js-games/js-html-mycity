@@ -1,7 +1,7 @@
 var localeStrings = [];
-localeStrings.push("Saluton ludanto en ĉi tiu pliiga ludo!");
-localeStrings.push("Via tasko estas simpla - administru la urbon kiel urbestro de la urbo!");
-localeStrings.push("Civitanoj pagos impostojn ĉiun sezonon (30 sekojn) kaj ankaŭ populacio kreskos ĉiun sezonon");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
 localeStrings.push("konstruu aŭ plibonigu vian trezorejon");
 localeStrings.push("kvanto da mono pliiĝas");
 localeStrings.push("kvanto da mono malpliiĝas");//5
@@ -54,7 +54,7 @@ localeStrings.push("Kiel ludi");
 localeStrings.push("Discord");
 localeStrings.push("Estingi la fajron");
 localeStrings.push("Ekzekuti civitanon");
-localeStrings.push("merdo okazas: la pesto mortigis %arg1 civitanojn");//55
+localeStrings.push("placeholder");//55
 localeStrings.push("Ĉu vi volas fari festivalon?\nKostus al vi %arg1 oro!\n");
 localeStrings.push("Festivalo estis farita antaŭ ne tre longa tempo.\nLa efekto de festivalo malfortiĝus.\n");
 localeStrings.push(["The event item collected!","Your pledge is recorded!"]);
@@ -89,7 +89,7 @@ localeStrings.push("Your nickname");
 localeStrings.push("Update");
 localeStrings.push(["Your nickname is registered","Your nickname is updated","Sorry, but this nicknames is taken"]);
 localeStrings.push("%arg1 gold has been added to your treasury");
-localeStrings.push("Gems are most valued currency");//90
+localeStrings.push("Ambro estas la plej malofta valuto");//90
 localeStrings.push("Garnison");
 localeStrings.push("Forsenti");
 localeStrings.push("Dungi");
@@ -116,7 +116,7 @@ localeStrings.push("Konstrui Kaŝejon<br/>nivelo %arg1<br/>pro %arg2 oro");
 localeStrings.push("Konstrui Gatejon<br/>nivelo %arg1<br/>pro %arg2 oro");
 localeStrings.push("Konstrui Ĉevalejo<br/>lvl %arg1<br/>pro %arg2 gold");//115
 localeStrings.push("Konstrui Pafado<br/>lvl %arg1<br/>pro %arg2 gold");
-localeStrings.push("placeholder");
+localeStrings.push("Konstrui Kastelon<br/>nivelo %arg1<br/>pro %arg2 oro");//117
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");//120
@@ -216,7 +216,7 @@ localeStrings.push("bonŝanco");
 localeStrings.push("superstiĉo");
 localeStrings.push("moralo"); // 185
 localeStrings.push("la heroo trovis iom da mono: ");
-localeStrings.push("placeholder");
+localeStrings.push("Inteligenteco");
 localeStrings.push("placeholder");
 localeStrings.push("Nivelo");
 localeStrings.push("Atako");//190
@@ -407,3 +407,54 @@ localeStrings.push("You don't have any forces at the hero's squad");
 localeStrings.push("sergeants(%arg1)"); //375
 localeStrings.push("turkopols(%arg1)");
 localeStrings.push("knights(%arg1)");
+
+locObj = {};
+//locObj.welcome2 = {"txt":"", "loc":""};
+locObj.welcome0 = {"txt":"Saluton ludanto en ĉi tiu pliiga ludo!", "loc":"Once game initted, those strings are put to the gamelog"};
+locObj.welcome1 = {"txt":"Via tasko estas simpla - administru la urbon kiel urbestro de la urbo!", "loc":"same"};
+locObj.welcome2 = {"txt":"Civitanoj pagos impostojn ĉiun sezonon (30 sekojn) kaj ankaŭ populacio kreskos ĉiun sezonon", "loc":"same"};
+locObj.okay = {"txt":"OK", "loc":"Mostly used in information dialogues"}
+
+locObj.unit_sergeants = {"txt": "Sergeants", "loc": "Autbattle log, player unit"};
+locObj.unit_turkopols = {"txt": "Turkopols", "loc": "Autbattle log, player unit"};
+locObj.unit_knights = {"txt": "Brother-knights", "loc": "Autbattle log, player unit"};
+
+locObj.unit_bandit = {"txt": "Bandits", "loc": "Autbattle log, enemy unit"};
+locObj.unit_bandit_archer = {"txt": "Bandits archers", "loc": "Autbattle log, enemy unit"};
+locObj.unit_merc_swordman = {"txt": "Mercenary swordman", "loc": "Autbattle log, highlevel enemy unit"};
+locObj.unit_merc_spearman = {"txt": "Mercenary spearman", "loc": "Autbattle log, highlevel enemy unit"};
+
+locObj.autobattle_journal_btn = {"txt": "Battle journal", "loc": "Inn window. Battle report by round moves"};
+locObj.autobattle_journal_log_start = {"txt": "Round started", "loc": "Start round title"};
+locObj.autobattle_journal_log_end = {"txt": "Round ended", "loc": "End round title"};
+locObj.autobattle_journal_log_dmg = {"txt": "%arg1 squad does %arg2 dmg to %arg3.", "loc": "Autobattle dmg log"};
+locObj.autobattle_journal_log_dead = {"txt": "%arg1 %arg2 is dead.", "loc": "Autobattle dead log"};
+locObj.autobattle_journal_log_destroyed = {"txt": "%arg1 squad is destroyed.", "loc": "Autobattle destroyed squad log"};
+
+locObj.advmap = {"txt":"Por movi vian heroon uzu sagobutonojn.\nSe vi ludas per sensila eniro, bonvolu ŝalti Mobile UI en Preferoj", "loc":"when first visiting adventure map"};
+locObj.plague_turk = {"txt":"Rande: via turkopolo ekvidis pestulon kaj pafis lin. La kadavro estis bruligita poste ", "loc":"Random event. Plague. A turkopol prevents plague in the city"};
+locObj.plague_army = {"txt":"merdo okazas: la pesta eksplodo estis ĉesigita de via garnizono, sed mortigis %arg1 el viaj garnizonaj trupoj", "loc":"Your army prevents plague in the city. Some soldiers are dead now"};
+locObj.plague = {"txt":"merdo okazas: la pesto mortigis %arg1 civitanojn", "loc":"default plague case + case where army failed to prevent outbreak"};
+locObj.city_chest_gold = {"txt":"Vi trovis %arg1 oron en kesto! !", "loc":"Random event. Opened a short-living chest in city screen"};
+locObj.blackmarket_dstr = {"txt":"Alta, grasventra verda koboldo, kiu nomis sin Elbenkonig,\n  ofertis al vi diversajn magiajn artefaktojn.\nVi, kiel vera kristano, frato de teŭtona ordo, ofendiĝis pro ĝi.\nLa unua via intenco estis mortigi la koboldon kaj bruligi la merkaton.\nAliflanke, magiaj artefaktoj povus montriĝi utilaj en ĉi tiu mondo.\nKion vi faros?", "loc":"This dialogue happens every time you first visit blackmarket on the newly generated map"};
+locObj.blackmarket_dstr_brn = {"txt":"Mortigu la koboldon kaj forbruligu la nigran merkaton!", "loc":"Destroying the blackmarket"};
+locObj.blackmarket_dstr_kp = {"txt":"Komencu komercadon ", "loc":"Keeping the blackmarket"};
+locObj.borderCollide = {"txt":"Vi trafis nevideblan muron. Vi ne povus preterpasi plu", "loc":"adventure map. collision with border"};
+
+locObj.campaignTitle = {"txt":"Campaign-%arg1","loc":"Autocampaign accordion title"};
+locObj.autobattleTitle = {"txt": "Battle-%arg1", "loc": "Autobattle log title"};
+
+locObj.upgCostSidebar = {"txt":"Altgradigo al %arg1 nivelo kostas %arg2 orojn", "loc":"Shows under the building description on the left sidebar for upgrades"};
+locObj.bldCostSidebar = {"txt":"Konstruaĵo kostas %arg2 orojn ", "loc":"Shows under the building description on the left sidebar for initial building"};
+
+locObj.knightLearnCurve = {"txt":"Havas grandan ŝancon pliigi ATK kiam altnivele", "loc":"short description of the class in inn"};
+locObj.monkLearnCurve = {"txt":"Havas grandan ŝancon pliigi DEF kiam altnivele", "loc":"short description of the class in inn"};
+locObj.heroClassKnight = {"txt":"Kavaliro", "loc":"The inn when we are hiring. Hero class"};
+locObj.heroClassMonk = {"txt":"Monako", "loc":"The inn when we are hiring. Hero class"};
+
+locObj.heroLvlLbl = {"txt":"nivelo", "loc":"The inn when we are hiring. Level"};
+locObj.heroStatsLbl = {"txt":"Statistikoj: ", "loc":"The inn when we are hiring. Stats"};
+locObj.heroStatsAtkLbl = {"txt":"Atako", "loc":"The inn when we are hiring. Stats. Attack"};
+locObj.heroStatsDefLbl = {"txt":"Defendo", "loc":"The inn when we are hiring. Stats. Defence"};
+locObj.heroStatsMpowLbl = {"txt":"Magia potenco", "loc":"The inn when we are hiring. Stats. Magic power"};
+locObj.heroStatsIntLbl = {"txt":"Inteligenteco", "loc":"The inn when we are hiring. Stats. Intelligence"};
