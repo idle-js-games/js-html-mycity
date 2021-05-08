@@ -116,7 +116,7 @@ localeStrings.push("Build Stash<br/>lvl %arg1<br/>%arg2 gold");
 localeStrings.push("Build Inn<br/>lvl %arg1<br/>%arg2 gold");
 localeStrings.push("Build Stable<br/>lvl %arg1<br/>%arg2 gold");//115
 localeStrings.push("Build Archery range<br/>lvl %arg1<br/>%arg2 gold");
-localeStrings.push("placeholder");
+localeStrings.push("Build Castle<br/>lvl %arg1<br/>%arg2 gold");//117
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");//120
@@ -407,3 +407,13 @@ localeStrings.push("You don't have any forces at the hero's squad");
 localeStrings.push("sergeants(%arg1)"); //375
 localeStrings.push("turkopols(%arg1)");
 localeStrings.push("knights(%arg1)");
+localeStrings.push("Campaign-%arg1");
+
+locObj.glyphKnightTile = {"txt": "Glyph of Knight's Valor", "loc": "Имя глифа"};
+locObj.glyphKnightDesc = {"txt": "Increases the hero's attack +10, increases heroe's defence +6.", "loc": "Glyph desc"};
+
+locObj.glyphMonkTile = {"txt": "Glyph of Monk's Virtue", "loc": "Имя глифа"};
+locObj.glyphMonkDesc = {"txt": "Increases the hero's attack +4, increases heroe's defence +12.", "loc": "Glyph desc"};
+
+locObj.goldRuneTitle = {"txt": "Rune of Golden Search", "loc": "Имя глифа"};
+locObj.goldRuneDesc = {"txt": "Increases the hero's gold reward after battle by 35%.", "loc": "Glyph desc"};

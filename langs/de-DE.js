@@ -1,7 +1,7 @@
 var localeStrings = [];
-localeStrings.push("Seid gegrüßt, edler Spieler.");
-localeStrings.push("Eure Aufgabe ist einfach - verwaltet die Stadt als ihr Bürgermeister.");
-localeStrings.push("Bürger zahlen jede Saison (30 Sekunden) Steuern. Außerdem wird die Bevölkerung jede Saison wachsen.");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
+localeStrings.push("placeholder");
 localeStrings.push("Baut oder verbessert Eure Schatzkammer.");
 localeStrings.push("Euer Reichtum vergrößerte sich.");
 localeStrings.push("Euer Reichtum verringerte sich.");//5
@@ -54,7 +54,7 @@ localeStrings.push("Anleitung");
 localeStrings.push("Discord");
 localeStrings.push("Löscht das feuer");
 localeStrings.push("Bürger hinrichten");
-localeStrings.push("Dumm gelaufen: Die Pest streckte %arg1 Bürger nieder!");//55
+localeStrings.push("placeholder");//55
 localeStrings.push("Möchten Ihr ein Festival veranstalten?\nDas würde Sie %arg1 Gold kosten!\n");
 localeStrings.push("Festival wurde vor nicht allzu langer Zeit platziert.\nDer Effekt des Festivals würde schwächer werden.\n");
 localeStrings.push(["The event item collected!","Your pledge is recorded!"]);
@@ -89,7 +89,7 @@ localeStrings.push("Your nickname");
 localeStrings.push("Update");
 localeStrings.push(["Your nickname is registered","Your nickname is updated","Sorry, but this nicknames is taken"]);
 localeStrings.push("%arg1 gold has been added to your treasury");
-localeStrings.push("Gems are most valued currency");//90
+localeStrings.push("Bernstein ist die seltenste Währung");//90
 localeStrings.push("Garnison");
 localeStrings.push("Entlassen");
 localeStrings.push("Einstellen");
@@ -116,7 +116,7 @@ localeStrings.push("Versteck bauen<br/>lvl %arg1<br/>%arg2 gold");
 localeStrings.push("Schenke bauen<br/>lvl %arg1<br/>%arg2 gold");
 localeStrings.push("Stall bauen<br/>lvl %arg1<br/>%arg2 gold");//115
 localeStrings.push("Schießstand bauen<br/>lvl %arg1<br/>%arg2 gold");
-localeStrings.push("placeholder");
+localeStrings.push("Kastell bauen<br/>lvl %arg1<br/>%arg2 gold");
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");
 localeStrings.push("placeholder");//120
@@ -216,7 +216,7 @@ localeStrings.push("Glück");
 localeStrings.push("Aberglaube");
 localeStrings.push("Moral"); // 185
 localeStrings.push("Der Held hat etwas Geld gefunden: ");
-localeStrings.push("placeholder");
+localeStrings.push("Intelligenz");
 localeStrings.push("placeholder");
 localeStrings.push("Stufe");
 localeStrings.push("Attack");//190
@@ -408,3 +408,67 @@ localeStrings.push("sergeants(%arg1)"); //375
 localeStrings.push("turkopols(%arg1)");
 localeStrings.push("knights(%arg1)");
 
+locObj = {};
+//locObj.welcome2 = {"txt":"", "loc":""};
+locObj.welcome0 = {"txt":"Seid gegrüßt, edler Spieler.", "loc":"Once game initted, those strings are put to the gamelog"};
+locObj.welcome1 = {"txt":"Eure Aufgabe ist einfach - verwaltet die Stadt als ihr Bürgermeister.", "loc":"same"};
+locObj.welcome2 = {"txt":"Bürger zahlen jede Saison (30 Sekunden) Steuern. Außerdem wird die Bevölkerung jede Saison wachsen.", "loc":"same"};
+locObj.okay = {"txt":"Gut", "loc":"Mostly used in information dialogues"}
+
+locObj.tutorial0_w0 = {"txt":"Ihr Onkel, der Landmeister des Deutschen Ordens, hat Sie geschickt,\num eine Stadt an der heidnischen Grenze zu bauen.\nSie haben einen geeigneten Ort mit einem Hügel, einem Fluss und einem Wald gefunden.\nIhre Bauern haben den Platz bereits geräumt und sind bereit zum Bauen", "loc":"tutorial0_w0"};
+locObj.tutorial1_pop0 = {"txt":"Herr Komtur, Sie müssen Häuser bauen,\num Ihre Bevölkerung wachsen zu lassen", "loc":"tutorial0_w0"};
+
+locObj.unit_sergeants = {"txt": "Sergeants", "loc": "Autbattle log, player unit"};
+locObj.unit_turkopols = {"txt": "Turkopols", "loc": "Autbattle log, player unit"};
+locObj.unit_knights = {"txt": "Brother-knights", "loc": "Autbattle log, player unit"};
+
+locObj.unit_bandit = {"txt": "Bandits", "loc": "Autbattle log, enemy unit"};
+locObj.unit_bandit_archer = {"txt": "Bandits archers", "loc": "Autbattle log, enemy unit"};
+locObj.unit_merc_swordman = {"txt": "Mercenary swordman", "loc": "Autbattle log, highlevel enemy unit"};
+locObj.unit_merc_spearman = {"txt": "Mercenary spearman", "loc": "Autbattle log, highlevel enemy unit"};
+
+locObj.autobattle_journal_btn = {"txt": "Battle journal", "loc": "Inn window. Battle report by round moves"};
+locObj.autobattle_journal_log_start = {"txt": "Round started", "loc": "Start round title"};
+locObj.autobattle_journal_log_end = {"txt": "Round ended", "loc": "End round title"};
+locObj.autobattle_journal_log_dmg = {"txt": "%arg1 squad does %arg2 dmg to %arg3.", "loc": "Autobattle dmg log"};
+locObj.autobattle_journal_log_dead = {"txt": "%arg1 %arg2 is dead.", "loc": "Autobattle dead log"};
+locObj.autobattle_journal_log_destroyed = {"txt": "%arg1 squad is destroyed.", "loc": "Autobattle destroyed squad log"};
+
+locObj.advmap = {"txt":"Um deinen Helden zu bewegen, benutze die Pfeiltasten\nWenn Sie mit Sensoreingaben spielen, aktivieren Sie bitte die mobile Benutzeroberfläche in den Einstellungen", "loc":"when first visiting adventure map"};
+locObj.plague_turk = {"txt":"Am Rande: Ihr Turkopol hat eine Pestperson entdeckt und auf sie geschossen. Die Leiche wurde danach verbrannt", "loc":"Random event. Plague. A turkopol prevents plague in the city"};
+locObj.plague_army = {"txt":"Dumm gelaufen: Der Pestausbruch wurde von Ihrer Garnison gestoppt, aber %arg1 Ihrer Garnisonstruppen getötet", "loc":"Your army prevents plague in the city. Some soldiers are dead now"};
+locObj.plague = {"txt":"Dumm gelaufen: Die Pest streckte %arg1 Bürger nieder!", "loc":"default plague case + case where army failed to prevent outbreak"};
+locObj.city_chest_gold = {"txt":"Du hast %arg1 Gold in einer Truhe gefunden!", "loc":"Random event. Opened a short-living chest in city screen"};
+locObj.blackmarket_dstr = {"txt":"Ein großer grüner Kobold mit fettem Bauch, der sich Elbenkonig nannte,\n  bot Ihnen eine Vielzahl magischer Artefakte an.\nSie als wahrer Christ, ein Bruder des Deutschen Ordens, waren davon beleidigt.\nDas erste, was Sie vorhatten, war, den Kobold zu töten und den Markt zu verbrennen.\nAndererseits könnten sich magische Artefakte in dieser Welt als hilfreich erweisen.\nWas werden Sie tun?", "loc":"This dialogue happens every time you first visit blackmarket on the newly generated map"};
+locObj.blackmarket_dstr_brn = {"txt":"Töte den Kobold und verbrenne den Schwarzmarkt!", "loc":"Destroying the blackmarket"};
+locObj.blackmarket_dstr_kp = {"txt":"Starten Sie den Handel", "loc":"Keeping the blackmarket"};
+locObj.borderCollide = {"txt":"Du hast eine unsichtbare Wand getroffen. Du konnten nicht weiter gehen", "loc":"adventure map. collision with border"};
+
+locObj.campaignTitle = {"txt":"Campaign-%arg1","loc":"Autocampaign accordion title"};
+locObj.autobattleTitle = {"txt": "Battle-%arg1", "loc": "Autobattle log title"};
+
+locObj.upgCostSidebar = {"txt":"Ein Upgrade auf %arg1 Level kostet %arg2 Gold", "loc":"Shows under the building description on the left sidebar for upgrades"};
+locObj.bldCostSidebar = {"txt":"Der Bau kostet %arg2 Gold", "loc":"Shows under the building description on the left sidebar for initial building"};
+
+locObj.knightLearnCurve = {"txt":"Hat eine hohe Chance, die ATK zu erhöhen, wenn das Level steigt", "loc":"short description of the class in inn"};
+locObj.monkLearnCurve = {"txt":"Hat eine hohe Chance, die DEF zu erhöhen, wenn das Level steigt", "loc":"short description of the class in inn"};
+locObj.heroClassKnight = {"txt":"Ritter", "loc":"The inn when we are hiring. Hero class"};
+locObj.heroClassMonk = {"txt":"Mönch", "loc":"The inn when we are hiring. Hero class"};
+
+locObj.heroLvlLbl = {"txt":"Niveau", "loc":"The inn when we are hiring. Level"};
+locObj.heroStatsLbl = {"txt":"Statistiken:", "loc":"The inn when we are hiring. Stats"};
+locObj.heroStatsAtkLbl = {"txt":"Attacke", "loc":"The inn when we are hiring. Stats. Attack"};
+locObj.heroStatsDefLbl = {"txt":"Verteidigung", "loc":"The inn when we are hiring. Stats. Defence"};
+locObj.heroStatsMpowLbl = {"txt":"Magische Kraft", "loc":"The inn when we are hiring. Stats. Magic power"};
+locObj.heroStatsIntLbl = {"txt":"Intelligenz ", "loc":"The inn when we are hiring. Stats. Intelligence"};
+
+locObj.moneyExceedsTreasury = {"txt":"Herr Komtur, die Geldsumme, die Ihre Schatzkammer und die Geldbörse Ihres Helden haben, übersteigt Ihre Schatzkapazität. Um Geld zu vermeiden, bauen oder verbessern Sie jetzt Ihre Schatzkammer", "loc":"checking function which indicated if player needs to upgrade his treasury"};
+
+locObj.glyphKnightTile = {"txt": "Glyph of Knight's Valor", "loc": "Имя глифа"};
+locObj.glyphKnightDesc = {"txt": "Increases the hero's attack +10, increases heroe's defence +6.", "loc": "Glyph desc"};
+
+locObj.glyphMonkTile = {"txt": "Glyph of Monk's Virtue", "loc": "Имя глифа"};
+locObj.glyphMonkDesc = {"txt": "Increases the hero's attack +4, increases heroe's defence +12.", "loc": "Glyph desc"};
+
+locObj.goldRuneTitle = {"txt": "Rune of Golden Search", "loc": "Имя глифа"};
+locObj.goldRuneDesc = {"txt": "Increases the hero's gold reward after battle by 35%.", "loc": "Glyph desc"};
